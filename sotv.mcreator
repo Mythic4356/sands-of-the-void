@@ -143,21 +143,6 @@
       }
     },
     {
-      "name": "EndermiteNest",
-      "type": "feature",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "endermite_nest",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/sotv/neoforge/biome_modifier/endermite_nest_biome_modifier.json",
-          "src/main/resources/data/sotv/worldgen/configured_feature/endermite_nest.json",
-          "src/main/resources/data/sotv/worldgen/placed_feature/endermite_nest.json",
-          "src/main/java/net/mythic/sotv/world/features/EndermiteNestFeature.java"
-        ]
-      }
-    },
-    {
       "name": "EndermiteNestAdditionalGenerationCondition",
       "type": "procedure",
       "compiles": true,
@@ -185,6 +170,22 @@
             "name": "world",
             "type": "world"
           }
+        ]
+      }
+    },
+    {
+      "name": "EndermiteNest",
+      "type": "structure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "endermite_nest",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/sotv/worldgen/structure_set/endermite_nest.json",
+          "src/main/resources/data/sotv/worldgen/template_pool/endermite_nest_rooms.json",
+          "src/main/resources/data/sotv/worldgen/template_pool/endermite_nest_tunnels.json",
+          "src/main/resources/data/sotv/worldgen/template_pool/endermite_nest.json",
+          "src/main/resources/data/sotv/worldgen/structure/endermite_nest.json"
         ]
       }
     }
