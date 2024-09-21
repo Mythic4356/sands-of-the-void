@@ -1,0 +1,9 @@
+{
+  "parent": "sotv:custom/endermite_egg",
+  "textures": {
+    "all": "sotv:block/endermite_egg",
+    "particle": "sotv:block/endermite_egg_particles",
+    "1": "sotv:block/endermite_egg"
+  },
+  "render_type": "translucent"
+}

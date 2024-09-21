@@ -1,0 +1,19 @@
+{
+  "_fv": 66,
+  "_type": "endbiome",
+  "definition": {
+    "biome": "NixDesert",
+    "generationType": "Midlands",
+    "weight": 1.6,
+    "midlands": "NixDesert",
+    "barrens": "NixDesert",
+    "mixins": [
+      "BiomeSourceMixin",
+      "TheEndBiomeSourceMixin",
+      "ClimateSamplerMixin",
+      "NoiseConfigMixin",
+      "ChunkNoiseSamplerMixin",
+      "NoiseGeneratorSettingsAccess"
+    ]
+  }
+}

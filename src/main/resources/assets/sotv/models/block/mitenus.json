@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "sotv:block/mitenus",
+    "up": "sotv:block/mitenus",
+    "north": "sotv:block/mitenus",
+    "east": "sotv:block/mitenus",
+    "south": "sotv:block/mitenus",
+    "west": "sotv:block/mitenus",
+    "particle": "sotv:block/mitenus"
+  },
+  "render_type": "solid"
+}

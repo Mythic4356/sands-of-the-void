@@ -1,0 +1,48 @@
+{
+  "type": "sotv:endermite_nest",
+  "config": {
+    "blocks": {
+      "filling_provider": {
+        "type": "minecraft:simple_state_provider",
+        "state": {
+          "Name": "minecraft:air"
+        }
+      },
+      "inner_layer_provider": {
+        "type": "minecraft:simple_state_provider",
+        "state": {
+          "Name": "sotv:mitenus"
+        }
+      },
+      "alternate_inner_layer_provider": {
+        "type": "minecraft:simple_state_provider",
+        "state": {
+          "Name": "minecraft:air"
+        }
+      },
+      "middle_layer_provider": {
+        "type": "minecraft:simple_state_provider",
+        "state": {
+          "Name": "sotv:hardened_mitenus"
+        }
+      },
+      "outer_layer_provider": {
+        "type": "minecraft:simple_state_provider",
+        "state": {
+          "Name": "minecraft:crying_obsidian"
+        }
+      },
+      "inner_placements": [
+        {
+          "Name": "sotv:endermite_egg"
+        }
+      ],
+      "cannot_replace": "#features_cannot_replace",
+      "invalid_blocks": "#geode_invalid_blocks"
+    },
+    "layers": {},
+    "crack": {},
+    "invalid_blocks_threshold": 1,
+    "use_alternate_layer0_chance": 0.083
+  }
+}

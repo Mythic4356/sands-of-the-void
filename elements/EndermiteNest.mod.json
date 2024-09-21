@@ -1,0 +1,29 @@
+{
+  "_fv": 66,
+  "_type": "feature",
+  "definition": {
+    "skipPlacement": false,
+    "generationStep": "SURFACE_STRUCTURES",
+    "restrictionBiomes": [
+      {
+        "value": "CUSTOM:NixDesert"
+      },
+      {
+        "value": "end_barrens"
+      },
+      {
+        "value": "small_end_islands"
+      },
+      {
+        "value": "end_midlands"
+      },
+      {
+        "value": "end_highlands"
+      }
+    ],
+    "generateCondition": {
+      "name": "EndermiteNestAdditionalGenerationCondition"
+    },
+    "featurexml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"feature_container\" deletable=\"false\" x=\"88\" y=\"52\"><value name=\"feature\"><block type=\"feature_geode_simple\"><mutation xmlns=\"http://www.w3.org/1999/xhtml\" inputs=\"1\"></mutation><field name=\"size\">1</field><field name=\"cannot_replace_tag\">features_cannot_replace</field><field name=\"invalid_blocks_count\">1</field><field name=\"invalid_blocks_tag\">geode_invalid_blocks</field><value name=\"filling\"><block type=\"blockstate_selector\"><mutation inputs=\"0\"/><field name=\"block\">Blocks.AIR</field></block></value><value name=\"inner_layer\"><block type=\"blockstate_selector\"><mutation inputs=\"0\"/><field name=\"block\">CUSTOM:Mitenus</field></block></value><value name=\"alternate_inner_layer\"><block type=\"blockstate_selector\"><mutation inputs=\"0\"/><field name=\"block\">Blocks.AIR</field></block></value><value name=\"middle_layer\"><block type=\"blockstate_selector\"><mutation inputs=\"0\"/><field name=\"block\">CUSTOM:HardenedMitenus</field></block></value><value name=\"outer_layer\"><block type=\"blockstate_selector\"><mutation inputs=\"0\"/><field name=\"block\">Blocks.CRYING_OBSIDIAN</field></block></value><value name=\"crystal0\"><block type=\"blockstate_selector\"><mutation inputs=\"0\"/><field name=\"block\">CUSTOM:EndermiteEgg</field></block></value></block></value><next><block type=\"placement_offset\"><value name=\"xz\"><block type=\"int_provider_uniform\"><field name=\"min\">-4</field><field name=\"max\">4</field></block></value><value name=\"y\"><block type=\"int_provider_uniform\"><field name=\"min\">-4</field><field name=\"max\">4</field></block></value></block></next></block></xml>"
+  }
+}

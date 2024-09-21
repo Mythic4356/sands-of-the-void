@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "sotv:block/hardened_mitenus",
+    "up": "sotv:block/hardened_mitenus",
+    "north": "sotv:block/hardened_mitenus",
+    "east": "sotv:block/hardened_mitenus",
+    "south": "sotv:block/hardened_mitenus",
+    "west": "sotv:block/hardened_mitenus",
+    "particle": "sotv:block/hardened_mitenus"
+  },
+  "render_type": "solid"
+}

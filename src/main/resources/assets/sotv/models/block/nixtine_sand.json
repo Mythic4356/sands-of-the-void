@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "sotv:block/nixtine_sand",
+    "up": "sotv:block/nixtine_sand",
+    "north": "sotv:block/nixtine_sand",
+    "east": "sotv:block/nixtine_sand",
+    "south": "sotv:block/nixtine_sand",
+    "west": "sotv:block/nixtine_sand",
+    "particle": "sotv:block/nixtine_sand"
+  },
+  "render_type": "solid"
+}

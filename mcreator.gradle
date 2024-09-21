@@ -1,0 +1,45 @@
+repositories {
+maven {
+  url = "https://maven.theillusivec4.top/"
+  }
+}
+
+dependencies {
+  runtimeOnly "top.theillusivec4.curios:curios-neoforge:8.0.1+1.20.6"
+  compileOnly "top.theillusivec4.curios:curios-neoforge:8.0.1+1.20.6:api"
+}
+
+
+repositories {
+  maven {
+      url = 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
+  }
+}
+
+dependencies {
+  implementation 'software.bernie.geckolib:geckolib-neoforge-1.20.6:4.5.4'
+}
+
+
+repositories {
+  maven {
+    name = "Progwml6's maven"
+    url = "https://dvs1.progwml6.com/files/maven/"
+  }
+  maven {
+    name = "Jared's maven"
+    url = "https://maven.blamejared.com/"
+  }
+  maven {
+    name = "ModMaven"
+    url = "https://modmaven.dev"
+  }
+}
+
+dependencies {
+    compileOnly("mezz.jei:jei-1.20.6-common-api:18.0.0.65")
+    compileOnly("mezz.jei:jei-1.20.6-neoforge-api:18.0.0.65")
+    runtimeOnly("mezz.jei:jei-1.20.6-neoforge:18.0.0.65")
+}
+
+

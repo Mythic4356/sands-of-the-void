@@ -1,0 +1,244 @@
+{
+  "mod_elements": [
+    {
+      "name": "NixtineSand",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nixtine_sand",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/sotv/loot_tables/blocks/nixtine_sand.json",
+          "src/main/java/net/mythic/sotv/block/NixtineSandBlock.java",
+          "src/main/resources/assets/sotv/blockstates/nixtine_sand.json",
+          "src/main/resources/assets/sotv/models/block/nixtine_sand.json",
+          "src/main/resources/assets/sotv/models/item/nixtine_sand.json"
+        ]
+      }
+    },
+    {
+      "name": "NixtineSandstone",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nixtine_sandstone",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/sotv/models/block/nixtine_sandstone.json",
+          "src/main/java/net/mythic/sotv/block/NixtineSandstoneBlock.java",
+          "src/main/resources/data/sotv/loot_tables/blocks/nixtine_sandstone.json",
+          "src/main/resources/assets/sotv/models/item/nixtine_sandstone.json",
+          "src/main/resources/assets/sotv/blockstates/nixtine_sandstone.json"
+        ]
+      }
+    },
+    {
+      "name": "NixDesert",
+      "type": "biome",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nix_desert",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/sotv/worldgen/biome/nix_desert.json"
+        ]
+      }
+    },
+    {
+      "name": "NixDesertEndGeneration",
+      "type": "endbiome",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nix_desert_end_generation",
+      "metadata": {
+        "files": []
+      }
+    },
+    {
+      "name": "EndermiteEggHatch",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "endermite_egg_hatch",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mythic/sotv/procedures/EndermiteEggHatchProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EndermiteEgg",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "endermite_egg",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mythic/sotv/block/EndermiteEggBlock.java",
+          "src/main/resources/assets/sotv/models/block/endermite_egg.json",
+          "src/main/resources/data/sotv/loot_tables/blocks/endermite_egg.json",
+          "src/main/resources/assets/sotv/models/item/endermite_egg.json",
+          "src/main/resources/assets/sotv/blockstates/endermite_egg.json"
+        ]
+      }
+    },
+    {
+      "name": "SandsOfTheVoidCreativeTab",
+      "type": "tab",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sands_of_the_void_creative_tab",
+      "metadata": {
+        "files": []
+      }
+    },
+    {
+      "name": "HardenedMitenus",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hardened_mitenus",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/sotv/loot_tables/blocks/hardened_mitenus.json",
+          "src/main/resources/assets/sotv/blockstates/hardened_mitenus.json",
+          "src/main/java/net/mythic/sotv/block/HardenedMitenusBlock.java",
+          "src/main/resources/assets/sotv/models/item/hardened_mitenus.json",
+          "src/main/resources/assets/sotv/models/block/hardened_mitenus.json"
+        ]
+      }
+    },
+    {
+      "name": "Mitenus",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mitenus",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/sotv/models/item/mitenus.json",
+          "src/main/resources/assets/sotv/blockstates/mitenus.json",
+          "src/main/resources/data/sotv/loot_tables/blocks/mitenus.json",
+          "src/main/java/net/mythic/sotv/block/MitenusBlock.java",
+          "src/main/resources/assets/sotv/models/block/mitenus.json"
+        ]
+      }
+    },
+    {
+      "name": "EndermiteNest",
+      "type": "feature",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "endermite_nest",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/sotv/neoforge/biome_modifier/endermite_nest_biome_modifier.json",
+          "src/main/resources/data/sotv/worldgen/configured_feature/endermite_nest.json",
+          "src/main/resources/data/sotv/worldgen/placed_feature/endermite_nest.json",
+          "src/main/java/net/mythic/sotv/world/features/EndermiteNestFeature.java"
+        ]
+      }
+    },
+    {
+      "name": "EndermiteNestAdditionalGenerationCondition",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "endermite_nest_additional_generation_condition",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mythic/sotv/procedures/EndermiteNestAdditionalGenerationConditionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "tag_elements": {
+    "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:Mitenus",
+      "~CUSTOM:HardenedMitenus",
+      "~CUSTOM:NixtineSandstone"
+    ],
+    "BIOMES:minecraft:has_structure/nether_fossil": [
+      "~CUSTOM:NixDesert"
+    ],
+    "BLOCKS:minecraft:mineable/shovel": [
+      "~CUSTOM:NixtineSand"
+    ]
+  },
+  "tab_element_order": {},
+  "language_map": {
+    "en_us": {
+      "block.sotv.endermite_egg": "Endermite Egg",
+      "item_group.sotv.sands_of_the_void_creative_tab": "Sands Of The Void",
+      "block.sotv.nixtine_sand": "Nixtine Sand",
+      "biome.sotv.nix_desert": "Nix Desert",
+      "block.sotv.nixtine_sandstone": "Nixtine Sandstone",
+      "block.sotv.hardened_mitenus": "Hardened Mitenus",
+      "block.sotv.mitenus": "Mitenus"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "sotv",
+    "modName": "SandsOfTheVoid",
+    "version": "1.0.0",
+    "author": "SANGEETH, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Not specified",
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [
+      "curios_api",
+      "geckolib",
+      "jei"
+    ],
+    "currentGenerator": "neoforge-1.20.6",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "modElementsPackage": "net.mythic.sotv"
+  },
+  "mcreatorVersion": 202400232117
+}
