@@ -4,11 +4,7 @@
   "definition": {
     "structure": "endermite_nest_center",
     "projection": "rigid",
-    "ignoredBlocks": [
-      {
-        "value": "Blocks.STRUCTURE_BLOCK"
-      }
-    ],
+    "ignoredBlocks": [],
     "spacing": 5,
     "separation": 2,
     "restrictionBiomes": [
@@ -25,41 +21,47 @@
         "value": "CUSTOM:NixDesert"
       }
     ],
-    "terrainAdaptation": "encapsulate",
+    "terrainAdaptation": "bury",
     "generationStep": "UNDERGROUND_STRUCTURES",
     "surfaceDetectionType": "WORLD_SURFACE_WG",
     "useStartHeight": true,
     "startHeightProviderType": "BIASED_TO_BOTTOM",
     "startHeightMin": 0,
     "startHeightMax": 128,
-    "size": 1,
-    "maxDistanceFromCenter": 64,
+    "size": 7,
+    "maxDistanceFromCenter": 116,
     "jigsawPools": [
-      {
-        "poolName": "tunnels",
-        "fallbackPool": "",
-        "poolParts": [
-          {
-            "weight": 1,
-            "structure": "endermite_nest_tunnel1",
-            "projection": "rigid",
-            "ignoredBlocks": []
-          }
-        ]
-      },
       {
         "poolName": "rooms",
         "fallbackPool": "",
         "poolParts": [
           {
-            "weight": 1,
-            "structure": "endermite_nest_center",
+            "weight": 2,
+            "structure": "endermite_nest_eggroom1",
             "projection": "rigid",
             "ignoredBlocks": []
           },
           {
-            "weight": 1,
-            "structure": "endermite_nest_eggroom1",
+            "weight": 3,
+            "structure": "endermite_nest_tunnel_c1",
+            "projection": "rigid",
+            "ignoredBlocks": []
+          },
+          {
+            "weight": 3,
+            "structure": "endermite_nest_tunnel_c2",
+            "projection": "rigid",
+            "ignoredBlocks": []
+          },
+          {
+            "weight": 3,
+            "structure": "endermite_nest_tunnel_ns",
+            "projection": "rigid",
+            "ignoredBlocks": []
+          },
+          {
+            "weight": 3,
+            "structure": "endermite_nest_tunnel_we",
             "projection": "rigid",
             "ignoredBlocks": []
           }

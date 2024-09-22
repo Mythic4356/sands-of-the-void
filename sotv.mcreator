@@ -182,7 +182,6 @@
       "metadata": {
         "files": [
           "src/main/resources/data/sotv/worldgen/template_pool/endermite_nest_rooms.json",
-          "src/main/resources/data/sotv/worldgen/template_pool/endermite_nest_tunnels.json",
           "src/main/resources/data/sotv/worldgen/template_pool/endermite_nest.json",
           "src/main/resources/data/sotv/worldgen/structure/endermite_nest.json",
           "src/main/resources/data/sotv/worldgen/structure_set/endermite_nest.json"
