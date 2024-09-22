@@ -1,7 +1,11 @@
 
 package net.mythic.sotv.block;
 
+import org.checkerframework.checker.units.qual.s;
+
+import net.mythic.sotv.procedures.EndermiteEggHatchRandomProcedure;
 import net.mythic.sotv.procedures.EndermiteEggHatchProcedure;
+import net.mythic.sotv.procedures.EndermiteEggHatchPlayerProcedure;
 
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.phys.shapes.Shapes;
@@ -17,12 +21,14 @@ import net.minecraft.world.level.Explosion;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.util.RandomSource;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
 public class EndermiteEggBlock extends Block {
 	public EndermiteEggBlock() {
-		super(BlockBehaviour.Properties.of().sound(SoundType.FUNGUS).strength(1f, 10f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
+		super(BlockBehaviour.Properties.of().ignitedByLava().sound(SoundType.FUNGUS).strength(1f, 10f).lightLevel(s -> 3).requiresCorrectToolForDrops().noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
 	}
 
 	@Override
@@ -42,7 +48,7 @@ public class EndermiteEggBlock extends Block {
 
 	@Override
 	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
-		return box(2, 1, 2, 14, 14, 14);
+		return box(2, 0, 2, 14, 16, 14);
 	}
 
 	@Override
@@ -59,9 +65,15 @@ public class EndermiteEggBlock extends Block {
 	}
 
 	@Override
+	public void tick(BlockState blockstate, ServerLevel world, BlockPos pos, RandomSource random) {
+		super.tick(blockstate, world, pos, random);
+		EndermiteEggHatchRandomProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ(), blockstate);
+	}
+
+	@Override
 	public boolean onDestroyedByPlayer(BlockState blockstate, Level world, BlockPos pos, Player entity, boolean willHarvest, FluidState fluid) {
 		boolean retval = super.onDestroyedByPlayer(blockstate, world, pos, entity, willHarvest, fluid);
-		EndermiteEggHatchProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
+		EndermiteEggHatchPlayerProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ(), entity);
 		return retval;
 	}
 
@@ -74,7 +86,7 @@ public class EndermiteEggBlock extends Block {
 	@Override
 	public void attack(BlockState blockstate, Level world, BlockPos pos, Player entity) {
 		super.attack(blockstate, world, pos, entity);
-		EndermiteEggHatchProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
+		EndermiteEggHatchPlayerProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ(), entity);
 	}
 
 	@Override

@@ -37,6 +37,12 @@
         "poolParts": [
           {
             "weight": 2,
+            "structure": "endermite_nest_tunnel_we",
+            "projection": "rigid",
+            "ignoredBlocks": []
+          },
+          {
+            "weight": 3,
             "structure": "endermite_nest_eggroom1",
             "projection": "rigid",
             "ignoredBlocks": []
@@ -54,14 +60,44 @@
             "ignoredBlocks": []
           },
           {
-            "weight": 3,
+            "weight": 2,
             "structure": "endermite_nest_tunnel_ns",
             "projection": "rigid",
             "ignoredBlocks": []
           },
           {
             "weight": 3,
-            "structure": "endermite_nest_tunnel_we",
+            "structure": "endermite_nest_tunnel_c3",
+            "projection": "rigid",
+            "ignoredBlocks": []
+          },
+          {
+            "weight": 4,
+            "structure": "endermite_nest_cross",
+            "projection": "rigid",
+            "ignoredBlocks": []
+          }
+        ]
+      },
+      {
+        "poolName": "vc",
+        "fallbackPool": "",
+        "poolParts": [
+          {
+            "weight": 3,
+            "structure": "endermite_nest_tunnel_c3",
+            "projection": "rigid",
+            "ignoredBlocks": []
+          },
+          {
+            "weight": 3,
+            "structure": "endermite_nest_tunnel_c4",
+            "projection": "rigid",
+            "ignoredBlocks": []
+          },
+          {
+            "weight": 2,
+            "structure": "endermite_nest_tunnel_ud",
             "projection": "rigid",
             "ignoredBlocks": []
           }

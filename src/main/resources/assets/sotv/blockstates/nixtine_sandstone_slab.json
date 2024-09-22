@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "sotv:block/nixtine_sandstone_slab"
+    },
+    "type=top": {
+      "model": "sotv:block/nixtine_sandstone_slab_top"
+    },
+    "type=double": {
+      "model": "sotv:block/nixtine_sandstone_slab_full"
+    }
+  }
+}

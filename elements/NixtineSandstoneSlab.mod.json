@@ -2,43 +2,44 @@
   "_fv": 66,
   "_type": "block",
   "definition": {
-    "texture": "endermite_egg",
-    "textureTop": "",
-    "textureLeft": "",
-    "textureFront": "",
-    "textureRight": "",
-    "textureBack": "",
-    "renderType": 2,
-    "customModelName": "endermite_egg:default",
+    "texture": "nixtine_sandstone_bottom",
+    "textureTop": "nixtine_sandstone_top",
+    "textureLeft": "nixtine_sandstone",
+    "textureFront": "nixtine_sandstone",
+    "textureRight": "nixtine_sandstone",
+    "textureBack": "nixtine_sandstone",
+    "renderType": 11,
+    "customModelName": "Single texture",
     "rotationMode": 0,
     "enablePitch": false,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
     "itemTexture": "",
-    "particleTexture": "endermite_egg_particles",
+    "particleTexture": "",
+    "blockBase": "Slab",
     "tintType": "No tint",
     "isItemTinted": false,
-    "hasTransparency": true,
+    "hasTransparency": false,
     "connectedSides": false,
-    "transparencyType": "TRANSLUCENT",
+    "transparencyType": "SOLID",
     "disableOffset": false,
     "boundingBoxes": [
       {
-        "mx": 2.0,
+        "mx": 0.0,
         "my": 0.0,
-        "mz": 2.0,
-        "Mx": 14.0,
+        "mz": 0.0,
+        "Mx": 16.0,
         "My": 16.0,
-        "Mz": 14.0,
+        "Mz": 16.0,
         "subtract": false
       }
     ],
-    "name": "Endermite Egg",
+    "name": "Nixtine Sandstone Slab",
     "specialInformation": {
       "fixedValue": []
     },
-    "hardness": 1.0,
-    "resistance": 10.0,
+    "hardness": 1.2,
+    "resistance": 0.4,
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTabs": [
@@ -46,19 +47,19 @@
         "value": "CUSTOM:SandsOfTheVoidCreativeTab"
       }
     ],
-    "destroyTool": "hoe",
+    "destroyTool": "pickaxe",
     "customDrop": {
       "value": ""
     },
     "dropAmount": 1,
     "useLootTableForDrops": false,
-    "requiresCorrectTool": true,
+    "requiresCorrectTool": false,
     "enchantPowerBonus": 0.0,
     "plantsGrowOn": false,
-    "canRedstoneConnect": true,
-    "lightOpacity": 0,
+    "canRedstoneConnect": false,
+    "lightOpacity": 15,
     "material": {
-      "value": "LEAVES"
+      "value": "ROCK"
     },
     "tickRate": 0,
     "tickRandomly": false,
@@ -83,7 +84,7 @@
     "isNotColidable": false,
     "isCustomSoundType": false,
     "soundOnStep": {
-      "value": "FUNGUS"
+      "value": "STONE"
     },
     "breakSound": {
       "value": ""
@@ -100,17 +101,17 @@
     "stepSound": {
       "value": ""
     },
-    "luminance": 3,
+    "luminance": 0,
     "unbreakable": false,
     "vanillaToolTier": "STONE",
     "isBonemealable": false,
     "hasInventory": false,
     "guiBoundTo": "<NONE>",
     "openGUIOnRightClick": false,
-    "inventorySize": 0,
+    "inventorySize": 9,
     "inventoryStackSize": 64,
-    "inventoryDropWhenDestroyed": false,
-    "inventoryComparatorPower": false,
+    "inventoryDropWhenDestroyed": true,
+    "inventoryComparatorPower": true,
     "inventoryOutSlotIDs": [],
     "inventoryInSlotIDs": [],
     "hasEnergyStorage": false,
@@ -121,31 +122,9 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "onTickUpdate": {
-      "name": "EndermiteEggHatchRandom"
-    },
-    "onDestroyedByPlayer": {
-      "name": "EndermiteEggHatchPlayer"
-    },
-    "onDestroyedByExplosion": {
-      "name": "EndermiteEggHatch"
-    },
-    "onStartToDestroy": {
-      "name": "EndermiteEggHatchPlayer"
-    },
-    "onRedstoneOn": {
-      "name": "EndermiteEggHatch"
-    },
-    "onHitByProjectile": {
-      "name": "EndermiteEggHatch"
-    },
     "generateFeature": false,
     "restrictionBiomes": [],
-    "blocksToReplace": [
-      {
-        "value": "TAG:stone_ore_replaceables"
-      }
-    ],
+    "blocksToReplace": [],
     "generationShape": "UNIFORM",
     "frequencyPerChunks": 10,
     "frequencyOnChunk": 16,

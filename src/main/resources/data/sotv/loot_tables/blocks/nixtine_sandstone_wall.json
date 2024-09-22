@@ -1,6 +1,6 @@
 {
   "type": "minecraft:block",
-  "random_sequence": "sotv:blocks/endermite_egg",
+  "random_sequence": "sotv:blocks/nixtine_sandstone_wall",
   "pools": [
     {
       "rolls": 1.0,
@@ -12,7 +12,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "sotv:endermite_egg"
+          "name": "sotv:nixtine_sandstone_wall"
         }
       ]
     }

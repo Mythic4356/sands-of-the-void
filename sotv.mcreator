@@ -143,17 +143,91 @@
       }
     },
     {
-      "name": "EndermiteNestAdditionalGenerationCondition",
+      "name": "EndermiteNest",
+      "type": "structure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "endermite_nest",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/sotv/worldgen/template_pool/endermite_nest_vc.json",
+          "src/main/resources/data/sotv/worldgen/structure_set/endermite_nest.json",
+          "src/main/resources/data/sotv/worldgen/template_pool/endermite_nest_rooms.json",
+          "src/main/resources/data/sotv/worldgen/template_pool/endermite_nest.json",
+          "src/main/resources/data/sotv/worldgen/structure/endermite_nest.json"
+        ]
+      }
+    },
+    {
+      "name": "NixtineSandstoneSlab",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nixtine_sandstone_slab",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/sotv/models/block/nixtine_sandstone_slab_full.json",
+          "src/main/resources/assets/sotv/models/block/nixtine_sandstone_slab.json",
+          "src/main/java/net/mythic/sotv/block/NixtineSandstoneSlabBlock.java",
+          "src/main/resources/data/sotv/loot_tables/blocks/nixtine_sandstone_slab.json",
+          "src/main/resources/assets/sotv/models/block/nixtine_sandstone_slab_top.json",
+          "src/main/resources/assets/sotv/blockstates/nixtine_sandstone_slab.json",
+          "src/main/resources/assets/sotv/models/item/nixtine_sandstone_slab.json"
+        ]
+      }
+    },
+    {
+      "name": "NixtineSandstoneStairs",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nixtine_sandstone_stairs",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mythic/sotv/block/NixtineSandstoneStairsBlock.java",
+          "src/main/resources/assets/sotv/models/block/nixtine_sandstone_stairs.json",
+          "src/main/resources/assets/sotv/models/block/nixtine_sandstone_stairs_outer.json",
+          "src/main/resources/assets/sotv/models/item/nixtine_sandstone_stairs.json",
+          "src/main/resources/data/sotv/loot_tables/blocks/nixtine_sandstone_stairs.json",
+          "src/main/resources/assets/sotv/blockstates/nixtine_sandstone_stairs.json",
+          "src/main/resources/assets/sotv/models/block/nixtine_sandstone_stairs_inner.json"
+        ]
+      }
+    },
+    {
+      "name": "NixtineSandstoneWall",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nixtine_sandstone_wall",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/sotv/models/block/nixtine_sandstone_wall_post.json",
+          "src/main/resources/data/sotv/loot_tables/blocks/nixtine_sandstone_wall.json",
+          "src/main/resources/assets/sotv/blockstates/nixtine_sandstone_wall.json",
+          "src/main/resources/assets/sotv/models/block/nixtine_sandstone_wall.json",
+          "src/main/resources/assets/sotv/models/block/nixtine_sandstone_wall_side_tall.json",
+          "src/main/resources/assets/sotv/models/block/nixtine_sandstone_wall_inventory.json",
+          "src/main/resources/assets/sotv/models/item/nixtine_sandstone_wall.json",
+          "src/main/java/net/mythic/sotv/block/NixtineSandstoneWallBlock.java"
+        ]
+      }
+    },
+    {
+      "name": "EndermiteEggHatchPlayer",
       "type": "procedure",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "endermite_nest_additional_generation_condition",
+      "registry_name": "endermite_egg_hatch_player",
       "metadata": {
-        "return_type": "logic",
         "files": [
-          "src/main/java/net/mythic/sotv/procedures/EndermiteNestAdditionalGenerationConditionProcedure.java"
+          "src/main/java/net/mythic/sotv/procedures/EndermiteEggHatchPlayerProcedure.java"
         ],
         "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
           {
             "name": "x",
             "type": "number"
@@ -174,17 +248,36 @@
       }
     },
     {
-      "name": "EndermiteNest",
-      "type": "structure",
+      "name": "EndermiteEggHatchRandom",
+      "type": "procedure",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "endermite_nest",
+      "registry_name": "endermite_egg_hatch_random",
       "metadata": {
         "files": [
-          "src/main/resources/data/sotv/worldgen/structure_set/endermite_nest.json",
-          "src/main/resources/data/sotv/worldgen/template_pool/endermite_nest_rooms.json",
-          "src/main/resources/data/sotv/worldgen/template_pool/endermite_nest.json",
-          "src/main/resources/data/sotv/worldgen/structure/endermite_nest.json"
+          "src/main/java/net/mythic/sotv/procedures/EndermiteEggHatchRandomProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
         ]
       }
     }
@@ -193,6 +286,9 @@
   "sound_elements": [],
   "tag_elements": {
     "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:NixtineSandstoneWall",
+      "~CUSTOM:NixtineSandstoneStairs",
+      "~CUSTOM:NixtineSandstoneSlab",
       "~CUSTOM:Mitenus",
       "~CUSTOM:HardenedMitenus",
       "~CUSTOM:NixtineSandstone"
@@ -200,19 +296,37 @@
     "BIOMES:minecraft:has_structure/nether_fossil": [
       "~CUSTOM:NixDesert"
     ],
+    "BLOCKS:minecraft:slabs": [
+      "~CUSTOM:NixtineSandstoneSlab"
+    ],
+    "BLOCKS:minecraft:mineable/hoe": [
+      "~CUSTOM:EndermiteEgg"
+    ],
+    "BLOCKS:minecraft:needs_stone_tool": [
+      "~CUSTOM:EndermiteEgg"
+    ],
     "BLOCKS:minecraft:mineable/shovel": [
       "~CUSTOM:NixtineSand"
+    ],
+    "BLOCKS:minecraft:walls": [
+      "~CUSTOM:NixtineSandstoneWall"
+    ],
+    "BLOCKS:minecraft:stairs": [
+      "~CUSTOM:NixtineSandstoneStairs"
     ]
   },
   "tab_element_order": {},
   "language_map": {
     "en_us": {
       "block.sotv.endermite_egg": "Endermite Egg",
+      "block.sotv.nixtine_sandstone_slab": "Nixtine Sandstone Slab",
       "item_group.sotv.sands_of_the_void_creative_tab": "Sands Of The Void",
+      "block.sotv.nixtine_sandstone_stairs": " Nixtine Sandstone Stairs",
       "block.sotv.nixtine_sand": "Nixtine Sand",
       "biome.sotv.nix_desert": "Nix Desert",
       "block.sotv.nixtine_sandstone": "Nixtine Sandstone",
       "block.sotv.hardened_mitenus": "Hardened Mitenus",
+      "block.sotv.nixtine_sandstone_wall": "Nixtine Sandstone Wall",
       "block.sotv.mitenus": "Mitenus"
     }
   },

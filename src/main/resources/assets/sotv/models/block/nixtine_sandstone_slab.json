@@ -1,0 +1,10 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "particle": "sotv:block/nixtine_sandstone_bottom",
+    "bottom": "sotv:block/nixtine_sandstone_bottom",
+    "top": "sotv:block/nixtine_sandstone_top",
+    "side": "sotv:block/nixtine_sandstone"
+  },
+  "render_type": "solid"
+}

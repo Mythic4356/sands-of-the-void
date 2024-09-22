@@ -21,6 +21,9 @@ public class SotvModItems {
 	public static final DeferredHolder<Item, Item> ENDERMITE_EGG = block(SotvModBlocks.ENDERMITE_EGG);
 	public static final DeferredHolder<Item, Item> HARDENED_MITENUS = block(SotvModBlocks.HARDENED_MITENUS);
 	public static final DeferredHolder<Item, Item> MITENUS = block(SotvModBlocks.MITENUS);
+	public static final DeferredHolder<Item, Item> NIXTINE_SANDSTONE_SLAB = block(SotvModBlocks.NIXTINE_SANDSTONE_SLAB);
+	public static final DeferredHolder<Item, Item> NIXTINE_SANDSTONE_STAIRS = block(SotvModBlocks.NIXTINE_SANDSTONE_STAIRS);
+	public static final DeferredHolder<Item, Item> NIXTINE_SANDSTONE_WALL = block(SotvModBlocks.NIXTINE_SANDSTONE_WALL);
 
 	// Start of user code block custom items
 	// End of user code block custom items

@@ -1,7 +1,10 @@
 {
   "variants": {
-    "": {
+    "blockstate=0": {
       "model": "sotv:block/nixtine_sand"
+    },
+    "blockstate=1": {
+      "model": "sotv:block/endermite_egg_states_blockstate_0"
     }
   }
 }
