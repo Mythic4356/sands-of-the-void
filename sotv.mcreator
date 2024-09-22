@@ -296,8 +296,14 @@
     "BIOMES:minecraft:has_structure/nether_fossil": [
       "~CUSTOM:NixDesert"
     ],
+    "BLOCKS:minecraft:mineable/hoe": [
+      "~CUSTOM:EndermiteEgg"
+    ],
     "BLOCKS:minecraft:slabs": [
       "~CUSTOM:NixtineSandstoneSlab"
+    ],
+    "BLOCKS:minecraft:needs_stone_tool": [
+      "~CUSTOM:EndermiteEgg"
     ],
     "BLOCKS:minecraft:mineable/shovel": [
       "~CUSTOM:NixtineSand"
