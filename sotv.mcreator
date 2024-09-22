@@ -159,61 +159,6 @@
       }
     },
     {
-      "name": "NixtineSandstoneSlab",
-      "type": "block",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "nixtine_sandstone_slab",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/sotv/models/block/nixtine_sandstone_slab_full.json",
-          "src/main/resources/assets/sotv/models/block/nixtine_sandstone_slab.json",
-          "src/main/java/net/mythic/sotv/block/NixtineSandstoneSlabBlock.java",
-          "src/main/resources/data/sotv/loot_tables/blocks/nixtine_sandstone_slab.json",
-          "src/main/resources/assets/sotv/models/block/nixtine_sandstone_slab_top.json",
-          "src/main/resources/assets/sotv/blockstates/nixtine_sandstone_slab.json",
-          "src/main/resources/assets/sotv/models/item/nixtine_sandstone_slab.json"
-        ]
-      }
-    },
-    {
-      "name": "NixtineSandstoneStairs",
-      "type": "block",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "nixtine_sandstone_stairs",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mythic/sotv/block/NixtineSandstoneStairsBlock.java",
-          "src/main/resources/assets/sotv/models/block/nixtine_sandstone_stairs.json",
-          "src/main/resources/assets/sotv/models/block/nixtine_sandstone_stairs_outer.json",
-          "src/main/resources/assets/sotv/models/item/nixtine_sandstone_stairs.json",
-          "src/main/resources/data/sotv/loot_tables/blocks/nixtine_sandstone_stairs.json",
-          "src/main/resources/assets/sotv/blockstates/nixtine_sandstone_stairs.json",
-          "src/main/resources/assets/sotv/models/block/nixtine_sandstone_stairs_inner.json"
-        ]
-      }
-    },
-    {
-      "name": "NixtineSandstoneWall",
-      "type": "block",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "nixtine_sandstone_wall",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/sotv/models/block/nixtine_sandstone_wall_post.json",
-          "src/main/resources/data/sotv/loot_tables/blocks/nixtine_sandstone_wall.json",
-          "src/main/resources/assets/sotv/blockstates/nixtine_sandstone_wall.json",
-          "src/main/resources/assets/sotv/models/block/nixtine_sandstone_wall.json",
-          "src/main/resources/assets/sotv/models/block/nixtine_sandstone_wall_side_tall.json",
-          "src/main/resources/assets/sotv/models/block/nixtine_sandstone_wall_inventory.json",
-          "src/main/resources/assets/sotv/models/item/nixtine_sandstone_wall.json",
-          "src/main/java/net/mythic/sotv/block/NixtineSandstoneWallBlock.java"
-        ]
-      }
-    },
-    {
       "name": "EndermiteEggHatchPlayer",
       "type": "procedure",
       "compiles": true,
@@ -244,6 +189,24 @@
             "name": "world",
             "type": "world"
           }
+        ]
+      }
+    },
+    {
+      "name": "NixtineSandstoneStairs",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nixtine_sandstone_stairs",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mythic/sotv/block/NixtineSandstoneStairsBlock.java",
+          "src/main/resources/assets/sotv/models/block/nixtine_sandstone_stairs.json",
+          "src/main/resources/assets/sotv/models/block/nixtine_sandstone_stairs_outer.json",
+          "src/main/resources/assets/sotv/models/item/nixtine_sandstone_stairs.json",
+          "src/main/resources/data/sotv/loot_tables/blocks/nixtine_sandstone_stairs.json",
+          "src/main/resources/assets/sotv/blockstates/nixtine_sandstone_stairs.json",
+          "src/main/resources/assets/sotv/models/block/nixtine_sandstone_stairs_inner.json"
         ]
       }
     },
@@ -280,15 +243,52 @@
           }
         ]
       }
+    },
+    {
+      "name": "NixtineSandstoneWall",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nixtine_sandstone_wall",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/sotv/models/block/nixtine_sandstone_wall_post.json",
+          "src/main/resources/data/sotv/loot_tables/blocks/nixtine_sandstone_wall.json",
+          "src/main/resources/assets/sotv/blockstates/nixtine_sandstone_wall.json",
+          "src/main/resources/assets/sotv/models/block/nixtine_sandstone_wall.json",
+          "src/main/resources/assets/sotv/models/block/nixtine_sandstone_wall_side_tall.json",
+          "src/main/resources/assets/sotv/models/block/nixtine_sandstone_wall_inventory.json",
+          "src/main/resources/assets/sotv/models/item/nixtine_sandstone_wall.json",
+          "src/main/java/net/mythic/sotv/block/NixtineSandstoneWallBlock.java"
+        ]
+      }
+    },
+    {
+      "name": "NixtineSandstoneSlab",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nixtine_sandstone_slab",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/sotv/models/block/nixtine_sandstone_slab_full.json",
+          "src/main/resources/assets/sotv/models/block/nixtine_sandstone_slab.json",
+          "src/main/java/net/mythic/sotv/block/NixtineSandstoneSlabBlock.java",
+          "src/main/resources/data/sotv/loot_tables/blocks/nixtine_sandstone_slab.json",
+          "src/main/resources/assets/sotv/models/block/nixtine_sandstone_slab_top.json",
+          "src/main/resources/assets/sotv/blockstates/nixtine_sandstone_slab.json",
+          "src/main/resources/assets/sotv/models/item/nixtine_sandstone_slab.json"
+        ]
+      }
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "tag_elements": {
     "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:NixtineSandstoneSlab",
       "~CUSTOM:NixtineSandstoneWall",
       "~CUSTOM:NixtineSandstoneStairs",
-      "~CUSTOM:NixtineSandstoneSlab",
       "~CUSTOM:Mitenus",
       "~CUSTOM:HardenedMitenus",
       "~CUSTOM:NixtineSandstone"
@@ -298,12 +298,6 @@
     ],
     "BLOCKS:minecraft:slabs": [
       "~CUSTOM:NixtineSandstoneSlab"
-    ],
-    "BLOCKS:minecraft:mineable/hoe": [
-      "~CUSTOM:EndermiteEgg"
-    ],
-    "BLOCKS:minecraft:needs_stone_tool": [
-      "~CUSTOM:EndermiteEgg"
     ],
     "BLOCKS:minecraft:mineable/shovel": [
       "~CUSTOM:NixtineSand"

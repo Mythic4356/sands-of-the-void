@@ -1,9 +1,9 @@
 {
   "replace": false,
   "values": [
+    "sotv:nixtine_sandstone_slab",
     "sotv:nixtine_sandstone_wall",
     "sotv:nixtine_sandstone_stairs",
-    "sotv:nixtine_sandstone_slab",
     "sotv:mitenus",
     "sotv:hardened_mitenus",
     "sotv:nixtine_sandstone"

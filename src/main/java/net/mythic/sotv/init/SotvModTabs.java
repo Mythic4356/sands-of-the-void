@@ -23,9 +23,9 @@ public class SotvModTabs {
 				tabData.accept(SotvModBlocks.ENDERMITE_EGG.get().asItem());
 				tabData.accept(SotvModBlocks.HARDENED_MITENUS.get().asItem());
 				tabData.accept(SotvModBlocks.MITENUS.get().asItem());
-				tabData.accept(SotvModBlocks.NIXTINE_SANDSTONE_SLAB.get().asItem());
 				tabData.accept(SotvModBlocks.NIXTINE_SANDSTONE_STAIRS.get().asItem());
 				tabData.accept(SotvModBlocks.NIXTINE_SANDSTONE_WALL.get().asItem());
+				tabData.accept(SotvModBlocks.NIXTINE_SANDSTONE_SLAB.get().asItem());
 			})
 
 					.build());
