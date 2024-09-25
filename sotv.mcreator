@@ -280,6 +280,116 @@
           "src/main/resources/assets/sotv/models/item/nixtine_sandstone_slab.json"
         ]
       }
+    },
+    {
+      "name": "IsopetranGelBlockValidPlacementCondition",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "isopetran_gel_block_valid_placement_condition",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mythic/sotv/procedures/IsopetranGelBlockValidPlacementConditionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Claspearl",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "claspearl",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mythic/sotv/item/ClaspearlItem.java",
+          "src/main/resources/assets/sotv/models/item/claspearl.json"
+        ]
+      }
+    },
+    {
+      "name": "ClaspearlRightclicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "claspearl_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mythic/sotv/procedures/ClaspearlRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ClaspearlRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "claspearl_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/sotv/recipes/claspearl.json"
+        ]
+      }
+    },
+    {
+      "name": "IsopetranGel",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "isopetran_gel",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/sotv/models/block/isopetran_gel.json",
+          "src/main/resources/data/sotv/loot_tables/blocks/isopetran_gel.json",
+          "src/main/resources/assets/sotv/blockstates/isopetran_gel.json",
+          "src/main/resources/assets/sotv/models/item/isopetran_gel.json",
+          "src/main/java/net/mythic/sotv/block/IsopetranGelBlock.java"
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -297,12 +407,14 @@
       "~CUSTOM:NixDesert"
     ],
     "BLOCKS:minecraft:mineable/hoe": [
+      "~CUSTOM:IsopetranGel",
       "~CUSTOM:EndermiteEgg"
     ],
     "BLOCKS:minecraft:slabs": [
       "~CUSTOM:NixtineSandstoneSlab"
     ],
     "BLOCKS:minecraft:needs_stone_tool": [
+      "~CUSTOM:IsopetranGel",
       "~CUSTOM:EndermiteEgg"
     ],
     "BLOCKS:minecraft:mineable/shovel": [
@@ -318,16 +430,18 @@
   "tab_element_order": {},
   "language_map": {
     "en_us": {
-      "block.sotv.endermite_egg": "Endermite Egg",
       "block.sotv.nixtine_sandstone_slab": "Nixtine Sandstone Slab",
+      "block.sotv.nixtine_sand": "Nixtine Sand",
+      "block.sotv.nixtine_sandstone": "Nixtine Sandstone",
+      "block.sotv.nixtine_sandstone_wall": "Nixtine Sandstone Wall",
+      "block.sotv.mitenus": "Mitenus",
+      "block.sotv.endermite_egg": "Endermite Egg",
+      "block.sotv.isopetran_gel": "Isopetran Gel",
       "item_group.sotv.sands_of_the_void_creative_tab": "Sands Of The Void",
       "block.sotv.nixtine_sandstone_stairs": " Nixtine Sandstone Stairs",
-      "block.sotv.nixtine_sand": "Nixtine Sand",
+      "item.sotv.claspearl": "Claspearl",
       "biome.sotv.nix_desert": "Nix Desert",
-      "block.sotv.nixtine_sandstone": "Nixtine Sandstone",
-      "block.sotv.hardened_mitenus": "Hardened Mitenus",
-      "block.sotv.nixtine_sandstone_wall": "Nixtine Sandstone Wall",
-      "block.sotv.mitenus": "Mitenus"
+      "block.sotv.hardened_mitenus": "Hardened Mitenus"
     }
   },
   "foldersRoot": {

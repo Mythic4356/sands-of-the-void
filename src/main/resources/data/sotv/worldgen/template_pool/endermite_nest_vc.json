@@ -34,6 +34,17 @@
           "processors": []
         }
       }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "sotv:endermite_nest_center",
+        "projection": "rigid",
+        "processors": {
+          "processors": []
+        }
+      }
     }
   ]
 }

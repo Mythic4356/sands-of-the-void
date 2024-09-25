@@ -22,10 +22,10 @@
       }
     ],
     "terrainAdaptation": "bury",
-    "generationStep": "UNDERGROUND_STRUCTURES",
+    "generationStep": "STRONGHOLDS",
     "surfaceDetectionType": "WORLD_SURFACE_WG",
     "useStartHeight": true,
-    "startHeightProviderType": "BIASED_TO_BOTTOM",
+    "startHeightProviderType": "VERY_BIASED_TO_BOTTOM",
     "startHeightMin": 0,
     "startHeightMax": 128,
     "size": 7,
@@ -98,6 +98,12 @@
           {
             "weight": 2,
             "structure": "endermite_nest_tunnel_ud",
+            "projection": "rigid",
+            "ignoredBlocks": []
+          },
+          {
+            "weight": 1,
+            "structure": "endermite_nest_center",
             "projection": "rigid",
             "ignoredBlocks": []
           }

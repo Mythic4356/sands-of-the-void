@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "sotv:block/isopetran_gel"
+    },
+    "facing=east": {
+      "model": "sotv:block/isopetran_gel",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "sotv:block/isopetran_gel",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "sotv:block/isopetran_gel",
+      "y": 270
+    },
+    "facing=up": {
+      "model": "sotv:block/isopetran_gel",
+      "x": 270
+    },
+    "facing=down": {
+      "model": "sotv:block/isopetran_gel",
+      "x": 90
+    }
+  }
+}
