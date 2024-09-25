@@ -1,14 +1,12 @@
 {
-  "block.sotv.nixtine_sandstone_slab": "Nixtine Sandstone Slab",
-  "block.sotv.nixtine_sand": "Nixtine Sand",
-  "block.sotv.nixtine_sandstone": "Nixtine Sandstone",
-  "block.sotv.nixtine_sandstone_wall": "Nixtine Sandstone Wall",
-  "block.sotv.mitenus": "Mitenus",
   "block.sotv.endermite_egg": "Endermite Egg",
-  "block.sotv.isopetran_gel": "Isopetran Gel",
+  "block.sotv.nixtine_sandstone_slab": "Nixtine Sandstone Slab",
   "item_group.sotv.sands_of_the_void_creative_tab": "Sands Of The Void",
   "block.sotv.nixtine_sandstone_stairs": " Nixtine Sandstone Stairs",
-  "item.sotv.claspearl": "Claspearl",
+  "block.sotv.nixtine_sand": "Nixtine Sand",
   "biome.sotv.nix_desert": "Nix Desert",
-  "block.sotv.hardened_mitenus": "Hardened Mitenus"
+  "block.sotv.nixtine_sandstone": "Nixtine Sandstone",
+  "block.sotv.nixtine_sandstone_wall": "Nixtine Sandstone Wall",
+  "block.sotv.hardened_mitenus": "Hardened Mitenus",
+  "block.sotv.mitenus": "Mitenus"
 }

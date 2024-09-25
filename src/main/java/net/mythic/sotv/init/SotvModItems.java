@@ -7,6 +7,7 @@ package net.mythic.sotv.init;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.DeferredHolder;
 
+import net.mythic.sotv.item.LatePearlItem;
 import net.mythic.sotv.item.ClaspearlItem;
 import net.mythic.sotv.SotvMod;
 
@@ -27,6 +28,7 @@ public class SotvModItems {
 	public static final DeferredHolder<Item, Item> NIXTINE_SANDSTONE_SLAB = block(SotvModBlocks.NIXTINE_SANDSTONE_SLAB);
 	public static final DeferredHolder<Item, Item> CLASPEARL = REGISTRY.register("claspearl", ClaspearlItem::new);
 	public static final DeferredHolder<Item, Item> ISOPETRAN_GEL = block(SotvModBlocks.ISOPETRAN_GEL);
+	public static final DeferredHolder<Item, Item> LATE_PEARL = REGISTRY.register("late_pearl", LatePearlItem::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items

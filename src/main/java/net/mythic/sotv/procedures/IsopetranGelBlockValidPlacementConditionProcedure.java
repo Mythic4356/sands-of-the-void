@@ -1,12 +1,6 @@
 package net.mythic.sotv.procedures;
 
-import net.minecraft.world.level.block.state.properties.Property;
-import net.minecraft.world.level.block.state.properties.EnumProperty;
-import net.minecraft.world.level.block.state.properties.DirectionProperty;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.core.Direction;
-import net.minecraft.core.BlockPos;
+import net.neoforged.bus.api.Event;
 
 public class IsopetranGelBlockValidPlacementConditionProcedure {
 	public static boolean execute(LevelAccessor world, double x, double y, double z, BlockState blockstate) {

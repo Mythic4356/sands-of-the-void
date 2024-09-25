@@ -15,6 +15,7 @@ import net.neoforged.bus.api.IEventBus;
 
 import net.mythic.sotv.init.SotvModTabs;
 import net.mythic.sotv.init.SotvModItems;
+import net.mythic.sotv.init.SotvModEntities;
 import net.mythic.sotv.init.SotvModBlocks;
 
 import net.minecraft.util.Tuple;
@@ -43,7 +44,7 @@ public class SotvMod {
 		SotvModBlocks.REGISTRY.register(modEventBus);
 
 		SotvModItems.REGISTRY.register(modEventBus);
-
+		SotvModEntities.REGISTRY.register(modEventBus);
 		SotvModTabs.REGISTRY.register(modEventBus);
 
 		// Start of user code block mod init

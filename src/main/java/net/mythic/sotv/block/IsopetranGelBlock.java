@@ -1,26 +1,7 @@
 
 package net.mythic.sotv.block;
 
-import org.checkerframework.checker.units.qual.s;
-
-import net.mythic.sotv.procedures.IsopetranGelBlockValidPlacementConditionProcedure;
-
-import net.minecraft.world.level.block.state.properties.DirectionProperty;
-import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.Rotation;
-import net.minecraft.world.level.block.Mirror;
-import net.minecraft.world.level.block.DirectionalBlock;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.LevelReader;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.item.context.BlockPlaceContext;
-import net.minecraft.core.Direction;
-import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
 
 public class IsopetranGelBlock extends Block {
 	public static final DirectionProperty FACING = DirectionalBlock.FACING;
@@ -65,7 +46,7 @@ public class IsopetranGelBlock extends Block {
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();
-			return IsopetranGelBlockValidPlacementConditionProcedure.execute(world, x, y, z, blockstate);
+			return IsopetranGelBlockValidPlacementConditionProcedure.execute();
 		}
 		return super.canSurvive(blockstate, worldIn, pos);
 	}

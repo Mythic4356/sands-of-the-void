@@ -28,6 +28,7 @@ public class SotvModTabs {
 				tabData.accept(SotvModBlocks.NIXTINE_SANDSTONE_SLAB.get().asItem());
 				tabData.accept(SotvModItems.CLASPEARL.get());
 				tabData.accept(SotvModBlocks.ISOPETRAN_GEL.get().asItem());
+				tabData.accept(SotvModItems.LATE_PEARL.get());
 			})
 
 					.build());
