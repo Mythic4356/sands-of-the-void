@@ -280,6 +280,32 @@
           "src/main/resources/assets/sotv/models/item/nixtine_sandstone_slab.json"
         ]
       }
+    },
+    {
+      "name": "LatePearl",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "late_pearl",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mythic/sotv/item/LatePearlItem.java",
+          "src/main/resources/assets/sotv/models/item/late_pearl.json"
+        ]
+      }
+    },
+    {
+      "name": "LatePearlEntity",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "late_pearl_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mythic/sotv/entity/LatePearlEntityEntity.java",
+          "src/main/java/net/mythic/sotv/client/renderer/LatePearlEntityRenderer.java"
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -318,16 +344,18 @@
   "tab_element_order": {},
   "language_map": {
     "en_us": {
-      "block.sotv.endermite_egg": "Endermite Egg",
       "block.sotv.nixtine_sandstone_slab": "Nixtine Sandstone Slab",
+      "block.sotv.nixtine_sand": "Nixtine Sand",
+      "block.sotv.nixtine_sandstone_wall": "Nixtine Sandstone Wall",
+      "block.sotv.nixtine_sandstone": "Nixtine Sandstone",
+      "block.sotv.mitenus": "Mitenus",
+      "entity.sotv.late_pearl_entity": "Late Pearl Entity",
+      "block.sotv.endermite_egg": "Endermite Egg",
       "item_group.sotv.sands_of_the_void_creative_tab": "Sands Of The Void",
       "block.sotv.nixtine_sandstone_stairs": " Nixtine Sandstone Stairs",
-      "block.sotv.nixtine_sand": "Nixtine Sand",
       "biome.sotv.nix_desert": "Nix Desert",
-      "block.sotv.nixtine_sandstone": "Nixtine Sandstone",
       "block.sotv.hardened_mitenus": "Hardened Mitenus",
-      "block.sotv.nixtine_sandstone_wall": "Nixtine Sandstone Wall",
-      "block.sotv.mitenus": "Mitenus"
+      "item.sotv.late_pearl": "Late Pearl"
     }
   },
   "foldersRoot": {

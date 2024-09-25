@@ -26,6 +26,7 @@ public class SotvModTabs {
 				tabData.accept(SotvModBlocks.NIXTINE_SANDSTONE_STAIRS.get().asItem());
 				tabData.accept(SotvModBlocks.NIXTINE_SANDSTONE_WALL.get().asItem());
 				tabData.accept(SotvModBlocks.NIXTINE_SANDSTONE_SLAB.get().asItem());
+				tabData.accept(SotvModItems.LATE_PEARL.get());
 			})
 
 					.build());
