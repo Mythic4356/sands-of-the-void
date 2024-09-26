@@ -29,6 +29,7 @@ public class SotvModItems {
 	public static final DeferredHolder<Item, Item> CLASPEARL = REGISTRY.register("claspearl", ClaspearlItem::new);
 	public static final DeferredHolder<Item, Item> ISOPETRAN_GEL = block(SotvModBlocks.ISOPETRAN_GEL);
 	public static final DeferredHolder<Item, Item> LATE_PEARL = REGISTRY.register("late_pearl", LatePearlItem::new);
+	public static final DeferredHolder<Item, Item> GELCOON = block(SotvModBlocks.GELCOON);
 
 	// Start of user code block custom items
 	// End of user code block custom items

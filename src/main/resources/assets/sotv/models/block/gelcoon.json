@@ -1,0 +1,9 @@
+{
+  "parent": "sotv:custom/gelcoon",
+  "textures": {
+    "all": "sotv:block/gelcoon",
+    "particle": "sotv:block/gelcoon",
+    "1": "sotv:block/gelcoon"
+  },
+  "render_type": "solid"
+}

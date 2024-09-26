@@ -1,14 +1,37 @@
 
 package net.mythic.sotv.block;
 
-import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
+import org.checkerframework.checker.units.qual.s;
+
+import net.mythic.sotv.procedures.IsopetranGelBlockValidPlacementConditionProcedure;
+
+import net.minecraft.world.phys.shapes.VoxelShape;
+import net.minecraft.world.phys.shapes.Shapes;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
+import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.Rotation;
+import net.minecraft.world.level.block.Mirror;
+import net.minecraft.world.level.block.DirectionalBlock;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.core.Direction;
+import net.minecraft.core.BlockPos;
 
 public class IsopetranGelBlock extends Block {
 	public static final DirectionProperty FACING = DirectionalBlock.FACING;
 
 	public IsopetranGelBlock() {
-		super(BlockBehaviour.Properties.of().air().sound(SoundType.SLIME_BLOCK).strength(1f, 10f).lightLevel(s -> 5).requiresCorrectToolForDrops().noCollission().speedFactor(0.5f).hasPostProcess((bs, br, bp) -> true)
-				.emissiveRendering((bs, br, bp) -> true));
+		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.SLIME_BLOCK).strength(0.25f, 1f).lightLevel(s -> 5).requiresCorrectToolForDrops().noCollission().speedFactor(0.5f).noOcclusion()
+				.hasPostProcess((bs, br, bp) -> true).emissiveRendering((bs, br, bp) -> true).isRedstoneConductor((bs, br, bp) -> false));
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
 	}
 
@@ -20,6 +43,23 @@ public class IsopetranGelBlock extends Block {
 	@Override
 	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
 		return 0;
+	}
+
+	@Override
+	public VoxelShape getVisualShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
+		return Shapes.empty();
+	}
+
+	@Override
+	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
+		return switch (state.getValue(FACING)) {
+			default -> box(-0.1, -0.1, -2.1, 16.1, 16.1, 1.1);
+			case NORTH -> box(-0.1, -0.1, 14.9, 16.1, 16.1, 18.1);
+			case EAST -> box(-2.1, -0.1, -0.1, 1.1, 16.1, 16.1);
+			case WEST -> box(14.9, -0.1, -0.1, 18.1, 16.1, 16.1);
+			case UP -> box(-0.1, -2.1, -0.1, 16.1, 1.1, 16.1);
+			case DOWN -> box(-0.1, 14.9, -0.1, 16.1, 18.1, 16.1);
+		};
 	}
 
 	@Override
@@ -46,7 +86,7 @@ public class IsopetranGelBlock extends Block {
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();
-			return IsopetranGelBlockValidPlacementConditionProcedure.execute();
+			return IsopetranGelBlockValidPlacementConditionProcedure.execute(world, x, y, z, blockstate);
 		}
 		return super.canSurvive(blockstate, worldIn, pos);
 	}

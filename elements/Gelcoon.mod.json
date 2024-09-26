@@ -2,56 +2,52 @@
   "_fv": 66,
   "_type": "block",
   "definition": {
-    "texture": "isopetran_gel",
+    "texture": "gelcoon",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",
     "textureRight": "",
     "textureBack": "",
     "renderType": 2,
-    "customModelName": "isopetran_gel:default",
-    "rotationMode": 4,
+    "customModelName": "gelcoon:default",
+    "rotationMode": 0,
     "enablePitch": false,
-    "emissiveRendering": true,
+    "emissiveRendering": false,
     "displayFluidOverlay": false,
-    "itemTexture": "isopetran_gel_item",
-    "particleTexture": "isopetran_gel_item",
+    "itemTexture": "",
+    "particleTexture": "",
     "tintType": "No tint",
     "isItemTinted": false,
     "hasTransparency": true,
     "connectedSides": false,
-    "transparencyType": "TRANSLUCENT",
+    "transparencyType": "SOLID",
     "disableOffset": false,
     "boundingBoxes": [
       {
-        "mx": -0.1,
-        "my": -0.1,
-        "mz": 14.9,
-        "Mx": 16.1,
-        "My": 16.1,
-        "Mz": 18.1,
+        "mx": 2.0,
+        "my": 0.0,
+        "mz": 2.0,
+        "Mx": 14.0,
+        "My": 16.0,
+        "Mz": 14.0,
         "subtract": false
       }
     ],
-    "name": "Isopetran Gel",
+    "name": "Gelcoon",
     "specialInformation": {
       "fixedValue": []
     },
-    "hardness": 0.25,
-    "resistance": 1.0,
+    "hardness": 1.0,
+    "resistance": 10.0,
     "hasGravity": false,
     "isWaterloggable": false,
-    "creativeTabs": [
-      {
-        "value": "CUSTOM:SandsOfTheVoidCreativeTab"
-      }
-    ],
-    "destroyTool": "shovel",
+    "creativeTabs": [],
+    "destroyTool": "pickaxe",
     "customDrop": {
       "value": ""
     },
     "dropAmount": 1,
-    "useLootTableForDrops": false,
+    "useLootTableForDrops": true,
     "requiresCorrectTool": true,
     "enchantPowerBonus": 0.0,
     "plantsGrowOn": false,
@@ -77,13 +73,13 @@
     "fireSpreadSpeed": 0,
     "isLadder": false,
     "slipperiness": 0.6,
-    "speedFactor": 0.5,
+    "speedFactor": 1.0,
     "jumpFactor": 1.0,
     "reactionToPushing": "NORMAL",
-    "isNotColidable": true,
+    "isNotColidable": false,
     "isCustomSoundType": false,
     "soundOnStep": {
-      "value": "SLIME"
+      "value": "STONE"
     },
     "breakSound": {
       "value": ""
@@ -100,12 +96,9 @@
     "stepSound": {
       "value": ""
     },
-    "luminance": 5,
+    "luminance": 0,
     "unbreakable": false,
-    "vanillaToolTier": "STONE",
-    "placingCondition": {
-      "name": "IsopetranGelBlockValidPlacementCondition"
-    },
+    "vanillaToolTier": "NONE",
     "isBonemealable": false,
     "hasInventory": false,
     "guiBoundTo": "<NONE>",

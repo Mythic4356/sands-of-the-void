@@ -15,6 +15,7 @@ import net.mythic.sotv.block.NixtineSandBlock;
 import net.mythic.sotv.block.MitenusBlock;
 import net.mythic.sotv.block.IsopetranGelBlock;
 import net.mythic.sotv.block.HardenedMitenusBlock;
+import net.mythic.sotv.block.GelcoonBlock;
 import net.mythic.sotv.block.EndermiteEggBlock;
 import net.mythic.sotv.SotvMod;
 
@@ -31,6 +32,7 @@ public class SotvModBlocks {
 	public static final DeferredHolder<Block, Block> NIXTINE_SANDSTONE_WALL = REGISTRY.register("nixtine_sandstone_wall", NixtineSandstoneWallBlock::new);
 	public static final DeferredHolder<Block, Block> NIXTINE_SANDSTONE_SLAB = REGISTRY.register("nixtine_sandstone_slab", NixtineSandstoneSlabBlock::new);
 	public static final DeferredHolder<Block, Block> ISOPETRAN_GEL = REGISTRY.register("isopetran_gel", IsopetranGelBlock::new);
+	public static final DeferredHolder<Block, Block> GELCOON = REGISTRY.register("gelcoon", GelcoonBlock::new);
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }
