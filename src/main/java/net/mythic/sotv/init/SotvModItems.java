@@ -6,6 +6,7 @@ package net.mythic.sotv.init;
 
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.DeferredHolder;
+import net.neoforged.neoforge.common.DeferredSpawnEggItem;
 
 import net.mythic.sotv.item.LatePearlItem;
 import net.mythic.sotv.SotvMod;
@@ -26,6 +27,7 @@ public class SotvModItems {
 	public static final DeferredHolder<Item, Item> NIXTINE_SANDSTONE_WALL = block(SotvModBlocks.NIXTINE_SANDSTONE_WALL);
 	public static final DeferredHolder<Item, Item> NIXTINE_SANDSTONE_SLAB = block(SotvModBlocks.NIXTINE_SANDSTONE_SLAB);
 	public static final DeferredHolder<Item, Item> LATE_PEARL = REGISTRY.register("late_pearl", LatePearlItem::new);
+	public static final DeferredHolder<Item, Item> QUEEN_MITE_SPAWN_EGG = REGISTRY.register("queen_mite_spawn_egg", () -> new DeferredSpawnEggItem(SotvModEntities.QUEEN_MITE, -6750055, -10092442, new Item.Properties()));
 
 	// Start of user code block custom items
 	// End of user code block custom items

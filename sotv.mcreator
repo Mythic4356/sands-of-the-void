@@ -306,6 +306,52 @@
           "src/main/java/net/mythic/sotv/client/renderer/LatePearlEntityRenderer.java"
         ]
       }
+    },
+    {
+      "name": "LatePearlRightclickedOnBlock",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "late_pearl_rightclicked_on_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mythic/sotv/procedures/LatePearlRightclickedOnBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "QueenMite",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "queen_mite",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mythic/sotv/entity/model/QueenMiteModel.java",
+          "src/main/java/net/mythic/sotv/entity/layer/QueenMiteLayer.java",
+          "src/main/resources/assets/sotv/models/item/queen_mite_spawn_egg.json",
+          "src/main/java/net/mythic/sotv/entity/QueenMiteEntity.java",
+          "src/main/java/net/mythic/sotv/client/renderer/QueenMiteRenderer.java"
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -337,6 +383,9 @@
     "BLOCKS:minecraft:walls": [
       "~CUSTOM:NixtineSandstoneWall"
     ],
+    "ENTITIES:minecraft:arthropod": [
+      "~CUSTOM:QueenMite"
+    ],
     "BLOCKS:minecraft:stairs": [
       "~CUSTOM:NixtineSandstoneStairs"
     ]
@@ -345,7 +394,9 @@
   "language_map": {
     "en_us": {
       "block.sotv.nixtine_sandstone_slab": "Nixtine Sandstone Slab",
+      "entity.sotv.queen_mite": "Queen Mite",
       "block.sotv.nixtine_sand": "Nixtine Sand",
+      "item.sotv.queen_mite_spawn_egg": "Queen Mite Spawn Egg",
       "block.sotv.nixtine_sandstone_wall": "Nixtine Sandstone Wall",
       "block.sotv.nixtine_sandstone": "Nixtine Sandstone",
       "block.sotv.mitenus": "Mitenus",
