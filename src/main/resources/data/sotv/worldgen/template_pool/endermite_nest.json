@@ -9,7 +9,16 @@
         "location": "sotv:endermite_nest_center",
         "projection": "rigid",
         "processors": {
-          "processors": []
+          "processors": [
+            {
+              "processor_type": "minecraft:block_ignore",
+              "blocks": [
+                {
+                  "Name": "minecraft:structure_block"
+                }
+              ]
+            }
+          ]
         }
       }
     }

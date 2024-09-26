@@ -4,30 +4,25 @@
   "definition": {
     "structure": "endermite_nest_center",
     "projection": "rigid",
-    "ignoredBlocks": [],
+    "ignoredBlocks": [
+      {
+        "value": "Blocks.STRUCTURE_BLOCK"
+      }
+    ],
     "spacing": 5,
     "separation": 2,
     "restrictionBiomes": [
       {
         "value": "end_highlands"
-      },
-      {
-        "value": "end_barrens"
-      },
-      {
-        "value": "end_midlands"
-      },
-      {
-        "value": "CUSTOM:NixDesert"
       }
     ],
     "terrainAdaptation": "bury",
-    "generationStep": "UNDERGROUND_STRUCTURES",
+    "generationStep": "STRONGHOLDS",
     "surfaceDetectionType": "WORLD_SURFACE_WG",
     "useStartHeight": true,
-    "startHeightProviderType": "BIASED_TO_BOTTOM",
+    "startHeightProviderType": "UNIFORM",
     "startHeightMin": 0,
-    "startHeightMax": 128,
+    "startHeightMax": 60,
     "size": 7,
     "maxDistanceFromCenter": 116,
     "jigsawPools": [
@@ -98,6 +93,12 @@
           {
             "weight": 2,
             "structure": "endermite_nest_tunnel_ud",
+            "projection": "rigid",
+            "ignoredBlocks": []
+          },
+          {
+            "weight": 1,
+            "structure": "endermite_nest_center",
             "projection": "rigid",
             "ignoredBlocks": []
           }

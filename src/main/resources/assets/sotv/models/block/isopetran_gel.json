@@ -1,0 +1,9 @@
+{
+  "parent": "sotv:custom/isopetran_gel",
+  "textures": {
+    "all": "sotv:block/isopetran_gel",
+    "particle": "sotv:block/isopetran_gel_item",
+    "2": "sotv:block/isopetran_gel"
+  },
+  "render_type": "translucent"
+}

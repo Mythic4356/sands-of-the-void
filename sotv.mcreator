@@ -282,6 +282,120 @@
       }
     },
     {
+      "name": "Claspearl",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "claspearl",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mythic/sotv/item/ClaspearlItem.java",
+          "src/main/resources/assets/sotv/models/item/claspearl.json"
+        ]
+      }
+    },
+    {
+      "name": "IsopetranGel",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "isopetran_gel",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/sotv/models/block/isopetran_gel.json",
+          "src/main/resources/data/sotv/loot_tables/blocks/isopetran_gel.json",
+          "src/main/resources/assets/sotv/blockstates/isopetran_gel.json",
+          "src/main/resources/assets/sotv/models/item/isopetran_gel.json",
+          "src/main/java/net/mythic/sotv/block/IsopetranGelBlock.java"
+        ]
+      }
+    },
+    {
+      "name": "ClaspearlRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "claspearl_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/sotv/recipes/claspearl.json"
+        ]
+      }
+    },
+    {
+      "name": "IsopetranGelBlockValidPlacementCondition",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "isopetran_gel_block_valid_placement_condition",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mythic/sotv/procedures/IsopetranGelBlockValidPlacementConditionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ClaspearlRightclicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "claspearl_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mythic/sotv/procedures/ClaspearlRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
       "name": "LatePearl",
       "type": "item",
       "compiles": true,
@@ -302,8 +416,35 @@
       "registry_name": "late_pearl_entity",
       "metadata": {
         "files": [
-          "src/main/java/net/mythic/sotv/entity/LatePearlEntityEntity.java",
-          "src/main/java/net/mythic/sotv/client/renderer/LatePearlEntityRenderer.java"
+          "src/main/java/net/mythic/sotv/client/renderer/LatePearlEntityRenderer.java",
+          "src/main/java/net/mythic/sotv/entity/LatePearlEntityEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "Gelcoon",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gelcoon",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/sotv/models/item/gelcoon.json",
+          "src/main/resources/assets/sotv/blockstates/gelcoon.json",
+          "src/main/java/net/mythic/sotv/block/GelcoonBlock.java",
+          "src/main/resources/assets/sotv/models/block/gelcoon.json"
+        ]
+      }
+    },
+    {
+      "name": "GelcoonLootTable",
+      "type": "loottable",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gelcoon_loot_table",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/sotv/loot_tables/blocks/gelcoon.json"
         ]
       }
     },
@@ -358,6 +499,7 @@
   "sound_elements": [],
   "tag_elements": {
     "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:Gelcoon",
       "~CUSTOM:NixtineSandstoneSlab",
       "~CUSTOM:NixtineSandstoneWall",
       "~CUSTOM:NixtineSandstoneStairs",
@@ -375,9 +517,11 @@
       "~CUSTOM:NixtineSandstoneSlab"
     ],
     "BLOCKS:minecraft:needs_stone_tool": [
+      "~CUSTOM:IsopetranGel",
       "~CUSTOM:EndermiteEgg"
     ],
     "BLOCKS:minecraft:mineable/shovel": [
+      "~CUSTOM:IsopetranGel",
       "~CUSTOM:NixtineSand"
     ],
     "BLOCKS:minecraft:walls": [
@@ -402,11 +546,14 @@
       "block.sotv.mitenus": "Mitenus",
       "entity.sotv.late_pearl_entity": "Late Pearl Entity",
       "block.sotv.endermite_egg": "Endermite Egg",
+      "block.sotv.isopetran_gel": "Isopetran Gel",
       "item_group.sotv.sands_of_the_void_creative_tab": "Sands Of The Void",
       "block.sotv.nixtine_sandstone_stairs": " Nixtine Sandstone Stairs",
+      "item.sotv.claspearl": "Claspearl",
       "biome.sotv.nix_desert": "Nix Desert",
       "block.sotv.hardened_mitenus": "Hardened Mitenus",
-      "item.sotv.late_pearl": "Late Pearl"
+      "item.sotv.late_pearl": "Late Pearl",
+      "block.sotv.gelcoon": "Gelcoon"
     }
   },
   "foldersRoot": {

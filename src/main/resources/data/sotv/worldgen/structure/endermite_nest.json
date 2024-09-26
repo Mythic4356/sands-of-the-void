@@ -4,22 +4,17 @@
   "size": 7,
   "max_distance_from_center": 116,
   "spawn_overrides": {},
-  "step": "underground_structures",
+  "step": "strongholds",
   "terrain_adaptation": "bury",
   "start_height": {
-    "type": "minecraft:biased_to_bottom",
+    "type": "minecraft:uniform",
     "min_inclusive": {
       "absolute": 0
     },
     "max_inclusive": {
-      "absolute": 128
+      "absolute": 60
     }
   },
-  "biomes": [
-    "end_highlands",
-    "end_barrens",
-    "end_midlands",
-    "sotv:nix_desert"
-  ],
+  "biomes": "end_highlands",
   "use_expansion_hack": false
 }
