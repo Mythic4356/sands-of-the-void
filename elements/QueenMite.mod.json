@@ -7,13 +7,13 @@
     "mobModelTexture": "placeholder.png",
     "mobModelGlowTexture": "late_pearl_entity.png",
     "visualScale": {
-      "fixedValue": 1.0
+      "fixedValue": 2.0
     },
     "boundingBoxScale": {
-      "fixedValue": 1.0
+      "fixedValue": 3.0
     },
     "entityDataEntries": [],
-    "modelWidth": 0.6,
+    "modelWidth": 0.8,
     "modelHeight": 1.8,
     "modelShadowSize": 0.5,
     "mountedYOffset": 0.0,
@@ -57,19 +57,19 @@
     "mobCreatureType": "ARTHROPOD",
     "attackStrength": 5,
     "attackKnockback": 0.5,
-    "knockbackResistance": 0.0,
+    "knockbackResistance": 0.5,
     "movementSpeed": 0.3,
     "armorBaseValue": 4.0,
     "trackingRange": 64,
     "followRange": 30,
-    "health": 30,
+    "health": 50,
     "xpAmount": 8,
     "waterMob": false,
     "flyingMob": false,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
-    "deathTime": 20,
+    "deathTime": 60,
     "lerp": 4,
     "disableCollisions": false,
     "ridable": false,
@@ -95,10 +95,10 @@
       "value": ""
     },
     "hurtSound": {
-      "value": "entity.generic.hurt"
+      "value": "entity.spider.hurt"
     },
     "deathSound": {
-      "value": "entity.generic.death"
+      "value": "block.honey_block.break"
     },
     "stepSound": {
       "value": ""
