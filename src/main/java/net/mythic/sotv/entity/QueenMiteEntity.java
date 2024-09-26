@@ -128,7 +128,7 @@ public class QueenMiteEntity extends Monster implements GeoEntity {
 
 	@Override
 	public EntityDimensions getDefaultDimensions(Pose pose) {
-		return super.getDefaultDimensions(pose).scale(3f);
+		return super.getDefaultDimensions(pose).scale(2f);
 	}
 
 	public static void init(SpawnPlacementRegisterEvent event) {
@@ -202,7 +202,7 @@ public class QueenMiteEntity extends Monster implements GeoEntity {
 	@Override
 	protected void tickDeath() {
 		++this.deathTime;
-		if (this.deathTime == 60) {
+		if (this.deathTime == 50) {
 			this.remove(QueenMiteEntity.RemovalReason.KILLED);
 			this.dropExperience();
 		}

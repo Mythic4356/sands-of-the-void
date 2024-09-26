@@ -30,7 +30,7 @@ public class SotvModEntities {
 	public static final DeferredHolder<EntityType<?>, EntityType<QueenMiteEntity>> QUEEN_MITE = register("queen_mite",
 			EntityType.Builder.<QueenMiteEntity>of(QueenMiteEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
-					.sized(0.8f, 1.8f));
+					.sized(1f, 0.8f));
 
 	private static <T extends Entity> DeferredHolder<EntityType<?>, EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));

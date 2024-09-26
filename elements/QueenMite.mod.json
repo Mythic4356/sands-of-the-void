@@ -10,12 +10,12 @@
       "fixedValue": 2.0
     },
     "boundingBoxScale": {
-      "fixedValue": 3.0
+      "fixedValue": 2.0
     },
     "entityDataEntries": [],
-    "modelWidth": 0.8,
-    "modelHeight": 1.8,
-    "modelShadowSize": 0.5,
+    "modelWidth": 1.0,
+    "modelHeight": 0.8,
+    "modelShadowSize": 1.0,
     "mountedYOffset": 0.0,
     "stepHeight": 1.0,
     "hasSpawnEgg": true,
@@ -69,7 +69,7 @@
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
-    "deathTime": 60,
+    "deathTime": 50,
     "lerp": 4,
     "disableCollisions": false,
     "ridable": false,

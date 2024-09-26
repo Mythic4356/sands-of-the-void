@@ -19,7 +19,7 @@ import com.mojang.blaze3d.vertex.PoseStack;
 public class QueenMiteRenderer extends GeoEntityRenderer<QueenMiteEntity> {
 	public QueenMiteRenderer(EntityRendererProvider.Context renderManager) {
 		super(renderManager, new QueenMiteModel());
-		this.shadowRadius = 0.5f;
+		this.shadowRadius = 1f;
 		this.addRenderLayer(new QueenMiteLayer(this));
 	}
 
