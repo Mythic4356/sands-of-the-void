@@ -8,11 +8,11 @@
       "registry_name": "nixtine_sand",
       "metadata": {
         "files": [
-          "src/main/resources/data/sotv/loot_tables/blocks/nixtine_sand.json",
-          "src/main/java/net/mythic/sotv/block/NixtineSandBlock.java",
           "src/main/resources/assets/sotv/blockstates/nixtine_sand.json",
           "src/main/resources/assets/sotv/models/block/nixtine_sand.json",
-          "src/main/resources/assets/sotv/models/item/nixtine_sand.json"
+          "src/main/resources/data/sotv/loot_tables/blocks/nixtine_sand.json",
+          "src/main/resources/assets/sotv/models/item/nixtine_sand.json",
+          "src/main/java/net/mythic/sotv/block/NixtineSandBlock.java"
         ]
       }
     },
@@ -25,10 +25,10 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/sotv/models/block/nixtine_sandstone.json",
-          "src/main/java/net/mythic/sotv/block/NixtineSandstoneBlock.java",
-          "src/main/resources/data/sotv/loot_tables/blocks/nixtine_sandstone.json",
+          "src/main/resources/assets/sotv/blockstates/nixtine_sandstone.json",
           "src/main/resources/assets/sotv/models/item/nixtine_sandstone.json",
-          "src/main/resources/assets/sotv/blockstates/nixtine_sandstone.json"
+          "src/main/resources/data/sotv/loot_tables/blocks/nixtine_sandstone.json",
+          "src/main/java/net/mythic/sotv/block/NixtineSandstoneBlock.java"
         ]
       }
     },
@@ -94,9 +94,9 @@
         "files": [
           "src/main/java/net/mythic/sotv/block/EndermiteEggBlock.java",
           "src/main/resources/assets/sotv/models/block/endermite_egg.json",
-          "src/main/resources/data/sotv/loot_tables/blocks/endermite_egg.json",
+          "src/main/resources/assets/sotv/blockstates/endermite_egg.json",
           "src/main/resources/assets/sotv/models/item/endermite_egg.json",
-          "src/main/resources/assets/sotv/blockstates/endermite_egg.json"
+          "src/main/resources/data/sotv/loot_tables/blocks/endermite_egg.json"
         ]
       }
     },
@@ -119,10 +119,10 @@
       "metadata": {
         "files": [
           "src/main/resources/data/sotv/loot_tables/blocks/hardened_mitenus.json",
-          "src/main/resources/assets/sotv/blockstates/hardened_mitenus.json",
-          "src/main/java/net/mythic/sotv/block/HardenedMitenusBlock.java",
+          "src/main/resources/assets/sotv/models/block/hardened_mitenus.json",
           "src/main/resources/assets/sotv/models/item/hardened_mitenus.json",
-          "src/main/resources/assets/sotv/models/block/hardened_mitenus.json"
+          "src/main/resources/assets/sotv/blockstates/hardened_mitenus.json",
+          "src/main/java/net/mythic/sotv/block/HardenedMitenusBlock.java"
         ]
       }
     },
@@ -134,10 +134,10 @@
       "registry_name": "mitenus",
       "metadata": {
         "files": [
+          "src/main/java/net/mythic/sotv/block/MitenusBlock.java",
+          "src/main/resources/data/sotv/loot_tables/blocks/mitenus.json",
           "src/main/resources/assets/sotv/models/item/mitenus.json",
           "src/main/resources/assets/sotv/blockstates/mitenus.json",
-          "src/main/resources/data/sotv/loot_tables/blocks/mitenus.json",
-          "src/main/java/net/mythic/sotv/block/MitenusBlock.java",
           "src/main/resources/assets/sotv/models/block/mitenus.json"
         ]
       }
@@ -150,11 +150,11 @@
       "registry_name": "endermite_nest",
       "metadata": {
         "files": [
-          "src/main/resources/data/sotv/worldgen/template_pool/endermite_nest_vc.json",
-          "src/main/resources/data/sotv/worldgen/structure_set/endermite_nest.json",
           "src/main/resources/data/sotv/worldgen/template_pool/endermite_nest_rooms.json",
+          "src/main/resources/data/sotv/worldgen/template_pool/endermite_nest_vc.json",
           "src/main/resources/data/sotv/worldgen/template_pool/endermite_nest.json",
-          "src/main/resources/data/sotv/worldgen/structure/endermite_nest.json"
+          "src/main/resources/data/sotv/worldgen/structure/endermite_nest.json",
+          "src/main/resources/data/sotv/worldgen/structure_set/endermite_nest.json"
         ]
       }
     },
@@ -201,12 +201,12 @@
       "metadata": {
         "files": [
           "src/main/java/net/mythic/sotv/block/NixtineSandstoneStairsBlock.java",
-          "src/main/resources/assets/sotv/models/block/nixtine_sandstone_stairs.json",
           "src/main/resources/assets/sotv/models/block/nixtine_sandstone_stairs_outer.json",
-          "src/main/resources/assets/sotv/models/item/nixtine_sandstone_stairs.json",
           "src/main/resources/data/sotv/loot_tables/blocks/nixtine_sandstone_stairs.json",
           "src/main/resources/assets/sotv/blockstates/nixtine_sandstone_stairs.json",
-          "src/main/resources/assets/sotv/models/block/nixtine_sandstone_stairs_inner.json"
+          "src/main/resources/assets/sotv/models/block/nixtine_sandstone_stairs_inner.json",
+          "src/main/resources/assets/sotv/models/item/nixtine_sandstone_stairs.json",
+          "src/main/resources/assets/sotv/models/block/nixtine_sandstone_stairs.json"
         ]
       }
     },
@@ -252,14 +252,14 @@
       "registry_name": "nixtine_sandstone_wall",
       "metadata": {
         "files": [
-          "src/main/resources/assets/sotv/models/block/nixtine_sandstone_wall_post.json",
-          "src/main/resources/data/sotv/loot_tables/blocks/nixtine_sandstone_wall.json",
-          "src/main/resources/assets/sotv/blockstates/nixtine_sandstone_wall.json",
-          "src/main/resources/assets/sotv/models/block/nixtine_sandstone_wall.json",
-          "src/main/resources/assets/sotv/models/block/nixtine_sandstone_wall_side_tall.json",
+          "src/main/java/net/mythic/sotv/block/NixtineSandstoneWallBlock.java",
           "src/main/resources/assets/sotv/models/block/nixtine_sandstone_wall_inventory.json",
+          "src/main/resources/data/sotv/loot_tables/blocks/nixtine_sandstone_wall.json",
+          "src/main/resources/assets/sotv/models/block/nixtine_sandstone_wall_post.json",
           "src/main/resources/assets/sotv/models/item/nixtine_sandstone_wall.json",
-          "src/main/java/net/mythic/sotv/block/NixtineSandstoneWallBlock.java"
+          "src/main/resources/assets/sotv/models/block/nixtine_sandstone_wall_side_tall.json",
+          "src/main/resources/assets/sotv/blockstates/nixtine_sandstone_wall.json",
+          "src/main/resources/assets/sotv/models/block/nixtine_sandstone_wall.json"
         ]
       }
     },
@@ -271,13 +271,13 @@
       "registry_name": "nixtine_sandstone_slab",
       "metadata": {
         "files": [
-          "src/main/resources/assets/sotv/models/block/nixtine_sandstone_slab_full.json",
-          "src/main/resources/assets/sotv/models/block/nixtine_sandstone_slab.json",
-          "src/main/java/net/mythic/sotv/block/NixtineSandstoneSlabBlock.java",
           "src/main/resources/data/sotv/loot_tables/blocks/nixtine_sandstone_slab.json",
-          "src/main/resources/assets/sotv/models/block/nixtine_sandstone_slab_top.json",
+          "src/main/resources/assets/sotv/models/item/nixtine_sandstone_slab.json",
           "src/main/resources/assets/sotv/blockstates/nixtine_sandstone_slab.json",
-          "src/main/resources/assets/sotv/models/item/nixtine_sandstone_slab.json"
+          "src/main/resources/assets/sotv/models/block/nixtine_sandstone_slab.json",
+          "src/main/resources/assets/sotv/models/block/nixtine_sandstone_slab_full.json",
+          "src/main/resources/assets/sotv/models/block/nixtine_sandstone_slab_top.json",
+          "src/main/java/net/mythic/sotv/block/NixtineSandstoneSlabBlock.java"
         ]
       }
     },
@@ -302,11 +302,11 @@
       "registry_name": "isopetran_gel",
       "metadata": {
         "files": [
-          "src/main/resources/assets/sotv/models/block/isopetran_gel.json",
+          "src/main/java/net/mythic/sotv/block/IsopetranGelBlock.java",
           "src/main/resources/data/sotv/loot_tables/blocks/isopetran_gel.json",
-          "src/main/resources/assets/sotv/blockstates/isopetran_gel.json",
           "src/main/resources/assets/sotv/models/item/isopetran_gel.json",
-          "src/main/java/net/mythic/sotv/block/IsopetranGelBlock.java"
+          "src/main/resources/assets/sotv/blockstates/isopetran_gel.json",
+          "src/main/resources/assets/sotv/models/block/isopetran_gel.json"
         ]
       }
     },
@@ -416,8 +416,8 @@
       "registry_name": "late_pearl_entity",
       "metadata": {
         "files": [
-          "src/main/java/net/mythic/sotv/client/renderer/LatePearlEntityRenderer.java",
-          "src/main/java/net/mythic/sotv/entity/LatePearlEntityEntity.java"
+          "src/main/java/net/mythic/sotv/entity/LatePearlEntityEntity.java",
+          "src/main/java/net/mythic/sotv/client/renderer/LatePearlEntityRenderer.java"
         ]
       }
     },
@@ -429,9 +429,9 @@
       "registry_name": "gelcoon",
       "metadata": {
         "files": [
+          "src/main/java/net/mythic/sotv/block/GelcoonBlock.java",
           "src/main/resources/assets/sotv/models/item/gelcoon.json",
           "src/main/resources/assets/sotv/blockstates/gelcoon.json",
-          "src/main/java/net/mythic/sotv/block/GelcoonBlock.java",
           "src/main/resources/assets/sotv/models/block/gelcoon.json"
         ]
       }
@@ -487,10 +487,10 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/sotv/models/item/scrutimite_spawn_egg.json",
-          "src/main/java/net/mythic/sotv/client/renderer/ScrutimiteRenderer.java",
           "src/main/java/net/mythic/sotv/entity/model/ScrutimiteModel.java",
-          "src/main/resources/data/sotv/neoforge/biome_modifier/scrutimite_biome_modifier.json",
-          "src/main/java/net/mythic/sotv/entity/ScrutimiteEntity.java"
+          "src/main/java/net/mythic/sotv/entity/ScrutimiteEntity.java",
+          "src/main/java/net/mythic/sotv/client/renderer/ScrutimiteRenderer.java",
+          "src/main/resources/data/sotv/neoforge/biome_modifier/scrutimite_biome_modifier.json"
         ]
       }
     },
@@ -532,11 +532,30 @@
       "registry_name": "queen_mite",
       "metadata": {
         "files": [
-          "src/main/resources/assets/sotv/models/item/queen_mite_spawn_egg.json",
-          "src/main/java/net/mythic/sotv/client/renderer/QueenMiteRenderer.java",
+          "src/main/java/net/mythic/sotv/entity/model/QueenMiteModel.java",
           "src/main/java/net/mythic/sotv/entity/layer/QueenMiteLayer.java",
+          "src/main/resources/assets/sotv/models/item/queen_mite_spawn_egg.json",
           "src/main/java/net/mythic/sotv/entity/QueenMiteEntity.java",
-          "src/main/java/net/mythic/sotv/entity/model/QueenMiteModel.java"
+          "src/main/java/net/mythic/sotv/client/renderer/QueenMiteRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "CheckLowHP",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "check_low_hp",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mythic/sotv/procedures/CheckLowHPProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
         ]
       }
     }
@@ -585,16 +604,20 @@
   "language_map": {
     "en_us": {
       "block.sotv.nixtine_sandstone_slab": "Nixtine Sandstone Slab",
+      "entity.sotv.queen_mite": "Queen Mite",
       "block.sotv.nixtine_sand": "Nixtine Sand",
+      "item.sotv.queen_mite_spawn_egg": "Queen Mite Spawn Egg",
       "block.sotv.nixtine_sandstone_wall": "Nixtine Sandstone Wall",
       "block.sotv.nixtine_sandstone": "Nixtine Sandstone",
       "block.sotv.mitenus": "Mitenus",
       "entity.sotv.late_pearl_entity": "Late Pearl Entity",
       "block.sotv.endermite_egg": "Endermite Egg",
       "block.sotv.isopetran_gel": "Isopetran Gel",
+      "item.sotv.scrutimite_spawn_egg": "Scrutimite Spawn Egg",
       "item_group.sotv.sands_of_the_void_creative_tab": "Sands Of The Void",
       "block.sotv.nixtine_sandstone_stairs": " Nixtine Sandstone Stairs",
       "item.sotv.claspearl": "Claspearl",
+      "entity.sotv.scrutimite": "Scrutimite",
       "biome.sotv.nix_desert": "Nix Desert",
       "block.sotv.hardened_mitenus": "Hardened Mitenus",
       "item.sotv.late_pearl": "Late Pearl",
