@@ -449,22 +449,6 @@
       }
     },
     {
-      "name": "Scrutimite",
-      "type": "animatedentity",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "scrutimite",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/sotv/models/item/scrutimite_spawn_egg.json",
-          "src/main/java/net/mythic/sotv/client/renderer/ScrutimiteRenderer.java",
-          "src/main/java/net/mythic/sotv/entity/model/ScrutimiteModel.java",
-          "src/main/resources/data/sotv/neoforge/biome_modifier/scrutimite_biome_modifier.json",
-          "src/main/java/net/mythic/sotv/entity/ScrutimiteEntity.java"
-        ]
-      }
-    },
-    {
       "name": "ScrutimiteEntityDies",
       "type": "procedure",
       "compiles": true,
@@ -491,6 +475,68 @@
             "name": "world",
             "type": "world"
           }
+        ]
+      }
+    },
+    {
+      "name": "Scrutimite",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scrutimite",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/sotv/models/item/scrutimite_spawn_egg.json",
+          "src/main/java/net/mythic/sotv/client/renderer/ScrutimiteRenderer.java",
+          "src/main/java/net/mythic/sotv/entity/model/ScrutimiteModel.java",
+          "src/main/resources/data/sotv/neoforge/biome_modifier/scrutimite_biome_modifier.json",
+          "src/main/java/net/mythic/sotv/entity/ScrutimiteEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "LatePearlRightclickedOnBlock",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "late_pearl_rightclicked_on_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mythic/sotv/procedures/LatePearlRightclickedOnBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "QueenMite",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "queen_mite",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/sotv/models/item/queen_mite_spawn_egg.json",
+          "src/main/java/net/mythic/sotv/client/renderer/QueenMiteRenderer.java",
+          "src/main/java/net/mythic/sotv/entity/layer/QueenMiteLayer.java",
+          "src/main/java/net/mythic/sotv/entity/QueenMiteEntity.java",
+          "src/main/java/net/mythic/sotv/entity/model/QueenMiteModel.java"
         ]
       }
     }
@@ -528,6 +574,7 @@
       "~CUSTOM:NixtineSandstoneWall"
     ],
     "ENTITIES:minecraft:arthropod": [
+      "~CUSTOM:QueenMite",
       "~CUSTOM:Scrutimite"
     ],
     "BLOCKS:minecraft:stairs": [
@@ -545,11 +592,9 @@
       "entity.sotv.late_pearl_entity": "Late Pearl Entity",
       "block.sotv.endermite_egg": "Endermite Egg",
       "block.sotv.isopetran_gel": "Isopetran Gel",
-      "item.sotv.scrutimite_spawn_egg": "Scrutimite Spawn Egg",
       "item_group.sotv.sands_of_the_void_creative_tab": "Sands Of The Void",
       "block.sotv.nixtine_sandstone_stairs": " Nixtine Sandstone Stairs",
       "item.sotv.claspearl": "Claspearl",
-      "entity.sotv.scrutimite": "Scrutimite",
       "biome.sotv.nix_desert": "Nix Desert",
       "block.sotv.hardened_mitenus": "Hardened Mitenus",
       "item.sotv.late_pearl": "Late Pearl",

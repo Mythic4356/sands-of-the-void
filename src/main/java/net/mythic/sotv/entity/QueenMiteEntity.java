@@ -14,12 +14,10 @@ import javax.annotation.Nullable;
 import software.bernie.geckolib.animation.AnimatableManager;
 import software.bernie.geckolib.animation.AnimationState;
 
-public class ScrutimiteEntity extends Monster implements GeoEntity {
-	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(ScrutimiteEntity.class, EntityDataSerializers.BOOLEAN);
-	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(ScrutimiteEntity.class, EntityDataSerializers.STRING);
-	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(ScrutimiteEntity.class, EntityDataSerializers.STRING);
-
-	public static final EntityDataAccessor<Boolean> DATA_egg = SynchedEntityData.defineId(ScrutimiteEntity.class, EntityDataSerializers.BOOLEAN);
+public class QueenMiteEntity extends Monster implements GeoEntity {
+	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(QueenMiteEntity.class, EntityDataSerializers.BOOLEAN);
+	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(QueenMiteEntity.class, EntityDataSerializers.STRING);
+	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(QueenMiteEntity.class, EntityDataSerializers.STRING);
 
 	private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 	private boolean swinging;
@@ -27,10 +25,12 @@ public class ScrutimiteEntity extends Monster implements GeoEntity {
 	private long lastSwing;
 	public String animationprocedure = "empty";
 
-	public ScrutimiteEntity(EntityType<ScrutimiteEntity> type, Level world) {
+	public QueenMiteEntity(EntityType<QueenMiteEntity> type, Level world) {
 		super(type, world);
-		xpReward = 0;
+		xpReward = 8;
 		setNoAi(false);
+
+		setPersistenceRequired();
 
 	}
 
@@ -39,8 +39,7 @@ public class ScrutimiteEntity extends Monster implements GeoEntity {
 		super.defineSynchedData(builder);
 		builder.define(SHOOT, false);
 		builder.define(ANIMATION, "undefined");
-		builder.define(TEXTURE, "scrutimite");
-		builder.define(DATA_egg, false);
+		builder.define(TEXTURE, "placeholder");
 	}
 
 	public void setTexture(String texture) {
@@ -55,7 +54,10 @@ public class ScrutimiteEntity extends Monster implements GeoEntity {
 	protected void registerGoals() {
 		super.registerGoals();
 
-		this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2, true) {
+		this.goalSelector.addGoal(1, new LeapAtTargetGoal(this, (float) 0.5));
+		this.targetSelector.addGoal(2, new NearestAttackableTargetGoal(this, Player.class, true, true));
+		this.targetSelector.addGoal(3, new NearestAttackableTargetGoal(this, EnderMan.class, true, false));
+		this.goalSelector.addGoal(4, new MeleeAttackGoal(this, 1.2, false) {
 
 			@Override
 			protected boolean canPerformAttack(LivingEntity entity) {
@@ -63,44 +65,33 @@ public class ScrutimiteEntity extends Monster implements GeoEntity {
 			}
 
 		});
-		this.goalSelector.addGoal(2, new WaterAvoidingRandomStrollGoal(this, 0.8));
-		this.targetSelector.addGoal(3, new HurtByTargetGoal(this).setAlertOthers());
-		this.targetSelector.addGoal(4, new NearestAttackableTargetGoal(this, EnderMan.class, true, true));
-		this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, ServerPlayer.class, true, true));
-		this.goalSelector.addGoal(6, new FollowMobGoal(this, 1, (float) 5, (float) 3));
-		this.goalSelector.addGoal(7, new RandomLookAroundGoal(this));
-		this.goalSelector.addGoal(8, new FloatGoal(this));
+		this.goalSelector.addGoal(5, new BreakDoorGoal(this, e -> true));
+		this.goalSelector.addGoal(6, new RandomStrollGoal(this, 1));
+		this.targetSelector.addGoal(7, new HurtByTargetGoal(this).setAlertOthers());
+		this.goalSelector.addGoal(8, new RandomLookAroundGoal(this));
+		this.goalSelector.addGoal(9, new FloatGoal(this));
 
+	}
+
+	@Override
+	public boolean removeWhenFarAway(double distanceToClosestPlayer) {
+		return false;
 	}
 
 	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
-		return BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.generic.hurt"));
+		return BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.spider.hurt"));
 	}
 
 	@Override
 	public SoundEvent getDeathSound() {
-		return BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.generic.death"));
-	}
-
-	@Override
-	public boolean hurt(DamageSource source, float amount) {
-		if (source.is(DamageTypes.DRAGON_BREATH))
-			return false;
-		return super.hurt(source, amount);
-	}
-
-	@Override
-	public void die(DamageSource source) {
-		super.die(source);
-		ScrutimiteEntityDiesProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ());
+		return BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.honey_block.break"));
 	}
 
 	@Override
 	public void addAdditionalSaveData(CompoundTag compound) {
 		super.addAdditionalSaveData(compound);
 		compound.putString("Texture", this.getTexture());
-		compound.putBoolean("Dataegg", this.entityData.get(DATA_egg));
 	}
 
 	@Override
@@ -108,8 +99,6 @@ public class ScrutimiteEntity extends Monster implements GeoEntity {
 		super.readAdditionalSaveData(compound);
 		if (compound.contains("Texture"))
 			this.setTexture(compound.getString("Texture"));
-		if (compound.contains("Dataegg"))
-			this.entityData.set(DATA_egg, compound.getBoolean("Dataegg"));
 	}
 
 	@Override
@@ -120,28 +109,25 @@ public class ScrutimiteEntity extends Monster implements GeoEntity {
 
 	@Override
 	public EntityDimensions getDefaultDimensions(Pose pose) {
-		return super.getDefaultDimensions(pose).scale(1f);
+		return super.getDefaultDimensions(pose).scale(2f);
 	}
 
 	public static void init(SpawnPlacementRegisterEvent event) {
-		event.register(SotvModEntities.SCRUTIMITE.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-				(entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL && Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)),
-				SpawnPlacementRegisterEvent.Operation.REPLACE);
 
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
-		builder = builder.add(Attributes.MAX_HEALTH, 10);
-		builder = builder.add(Attributes.ARMOR, 2);
-		builder = builder.add(Attributes.ATTACK_DAMAGE, 7);
-		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
-		builder = builder.add(Attributes.STEP_HEIGHT, 0.6);
+		builder = builder.add(Attributes.MAX_HEALTH, 50);
+		builder = builder.add(Attributes.ARMOR, 5);
+		builder = builder.add(Attributes.ATTACK_DAMAGE, 5);
+		builder = builder.add(Attributes.FOLLOW_RANGE, 30);
+		builder = builder.add(Attributes.STEP_HEIGHT, 1);
 
 		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 0.5);
 
-		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 0.2);
+		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 0.5);
 
 		return builder;
 	}
@@ -151,11 +137,32 @@ public class ScrutimiteEntity extends Monster implements GeoEntity {
 			if ((event.isMoving() || !(event.getLimbSwingAmount() > -0.15F && event.getLimbSwingAmount() < 0.15F))
 
 			) {
-				return event.setAndContinue(RawAnimation.begin().thenLoop("walk"));
+				return event.setAndContinue(RawAnimation.begin().thenLoop("walking"));
+			}
+			if (this.isDeadOrDying()) {
+				return event.setAndContinue(RawAnimation.begin().thenPlay("death"));
 			}
 			return event.setAndContinue(RawAnimation.begin().thenLoop("idle"));
 		}
 		return PlayState.STOP;
+	}
+
+	private PlayState attackingPredicate(AnimationState event) {
+		double d1 = this.getX() - this.xOld;
+		double d0 = this.getZ() - this.zOld;
+		float velocity = (float) Math.sqrt(d1 * d1 + d0 * d0);
+		if (getAttackAnim(event.getPartialTick()) > 0f && !this.swinging) {
+			this.swinging = true;
+			this.lastSwing = level().getGameTime();
+		}
+		if (this.swinging && this.lastSwing + 7L <= level().getGameTime()) {
+			this.swinging = false;
+		}
+		if (this.swinging && event.getController().getAnimationState() == AnimationController.State.STOPPED) {
+			event.getController().forceAnimationReset();
+			return event.setAndContinue(RawAnimation.begin().thenPlay(""));
+		}
+		return PlayState.CONTINUE;
 	}
 
 	String prevAnim = "empty";
@@ -180,8 +187,8 @@ public class ScrutimiteEntity extends Monster implements GeoEntity {
 	@Override
 	protected void tickDeath() {
 		++this.deathTime;
-		if (this.deathTime == 20) {
-			this.remove(ScrutimiteEntity.RemovalReason.KILLED);
+		if (this.deathTime == 50) {
+			this.remove(QueenMiteEntity.RemovalReason.KILLED);
 			this.dropExperience();
 
 		}
@@ -197,8 +204,9 @@ public class ScrutimiteEntity extends Monster implements GeoEntity {
 
 	@Override
 	public void registerControllers(AnimatableManager.ControllerRegistrar data) {
-		data.add(new AnimationController<>(this, "movement", 0, this::movementPredicate));
-		data.add(new AnimationController<>(this, "procedure", 0, this::procedurePredicate));
+		data.add(new AnimationController<>(this, "movement", 4, this::movementPredicate));
+		data.add(new AnimationController<>(this, "attacking", 4, this::attackingPredicate));
+		data.add(new AnimationController<>(this, "procedure", 4, this::procedurePredicate));
 	}
 
 	@Override

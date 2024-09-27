@@ -12,6 +12,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 
 import net.mythic.sotv.entity.ScrutimiteEntity;
+import net.mythic.sotv.entity.QueenMiteEntity;
 import net.mythic.sotv.entity.LatePearlEntityEntity;
 import net.mythic.sotv.SotvMod;
 
@@ -31,6 +32,10 @@ public class SotvModEntities {
 			EntityType.Builder.<ScrutimiteEntity>of(ScrutimiteEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
 					.sized(0.6f, 1.8f));
+	public static final DeferredHolder<EntityType<?>, EntityType<QueenMiteEntity>> QUEEN_MITE = register("queen_mite",
+			EntityType.Builder.<QueenMiteEntity>of(QueenMiteEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
+
+					.sized(1f, 0.8f));
 
 	private static <T extends Entity> DeferredHolder<EntityType<?>, EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -40,11 +45,13 @@ public class SotvModEntities {
 	public static void init(SpawnPlacementRegisterEvent event) {
 		LatePearlEntityEntity.init(event);
 		ScrutimiteEntity.init(event);
+		QueenMiteEntity.init(event);
 	}
 
 	@SubscribeEvent
 	public static void registerAttributes(EntityAttributeCreationEvent event) {
 		event.put(LATE_PEARL_ENTITY.get(), LatePearlEntityEntity.createAttributes().build());
 		event.put(SCRUTIMITE.get(), ScrutimiteEntity.createAttributes().build());
+		event.put(QUEEN_MITE.get(), QueenMiteEntity.createAttributes().build());
 	}
 }

@@ -10,6 +10,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.api.distmarker.Dist;
 
 import net.mythic.sotv.client.renderer.ScrutimiteRenderer;
+import net.mythic.sotv.client.renderer.QueenMiteRenderer;
 import net.mythic.sotv.client.renderer.LatePearlEntityRenderer;
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -18,5 +19,6 @@ public class SotvModEntityRenderers {
 	public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
 		event.registerEntityRenderer(SotvModEntities.LATE_PEARL_ENTITY.get(), LatePearlEntityRenderer::new);
 		event.registerEntityRenderer(SotvModEntities.SCRUTIMITE.get(), ScrutimiteRenderer::new);
+		event.registerEntityRenderer(SotvModEntities.QUEEN_MITE.get(), QueenMiteRenderer::new);
 	}
 }
