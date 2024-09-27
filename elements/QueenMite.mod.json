@@ -4,13 +4,13 @@
   "definition": {
     "mobName": "Queen Mite",
     "mobLabel": "",
-    "mobModelTexture": "placeholder.png",
-    "mobModelGlowTexture": "late_pearl_entity.png",
+    "mobModelTexture": "queenmite.png",
+    "mobModelGlowTexture": "queenmite_e.png",
     "visualScale": {
-      "fixedValue": 2.0
+      "fixedValue": 3.0
     },
     "boundingBoxScale": {
-      "fixedValue": 2.0
+      "fixedValue": 3.0
     },
     "entityDataEntries": [],
     "modelWidth": 1.0,

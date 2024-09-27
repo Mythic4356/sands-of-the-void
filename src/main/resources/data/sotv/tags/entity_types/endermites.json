@@ -1,7 +1,8 @@
 {
   "replace": false,
   "values": [
+    "sotv:scrutimite",
     "sotv:queen_mite",
-    "sotv:scrutimite"
+    "endermite"
   ]
 }

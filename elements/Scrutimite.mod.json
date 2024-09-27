@@ -5,7 +5,7 @@
     "mobName": "Scrutimite",
     "mobLabel": "",
     "mobModelTexture": "scrutimite.png",
-    "mobModelGlowTexture": "",
+    "mobModelGlowTexture": "scrutimite_e.png",
     "visualScale": {
       "fixedValue": 1.0
     },
