@@ -29,6 +29,7 @@ public class SotvModTabs {
 				tabData.accept(SotvModItems.CLASPEARL.get());
 				tabData.accept(SotvModBlocks.ISOPETRAN_GEL.get().asItem());
 				tabData.accept(SotvModItems.LATE_PEARL.get());
+				tabData.accept(SotvModItems.SCRUTIMITE_SPAWN_EGG.get());
 			})
 
 					.build());

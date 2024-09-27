@@ -6,6 +6,7 @@ package net.mythic.sotv.init;
 
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.DeferredHolder;
+import net.neoforged.neoforge.common.DeferredSpawnEggItem;
 
 import net.mythic.sotv.item.LatePearlItem;
 import net.mythic.sotv.item.ClaspearlItem;
@@ -30,6 +31,7 @@ public class SotvModItems {
 	public static final DeferredHolder<Item, Item> ISOPETRAN_GEL = block(SotvModBlocks.ISOPETRAN_GEL);
 	public static final DeferredHolder<Item, Item> LATE_PEARL = REGISTRY.register("late_pearl", LatePearlItem::new);
 	public static final DeferredHolder<Item, Item> GELCOON = block(SotvModBlocks.GELCOON);
+	public static final DeferredHolder<Item, Item> SCRUTIMITE_SPAWN_EGG = REGISTRY.register("scrutimite_spawn_egg", () -> new DeferredSpawnEggItem(SotvModEntities.SCRUTIMITE, -13434829, -65536, new Item.Properties()));
 
 	// Start of user code block custom items
 	// End of user code block custom items
