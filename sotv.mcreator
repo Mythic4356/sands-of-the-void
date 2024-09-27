@@ -540,6 +540,25 @@
           "src/main/java/net/mythic/sotv/entity/model/QueenMiteModel.java"
         ]
       }
+    },
+    {
+      "name": "CheckLowHP",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "check_low_hp",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mythic/sotv/procedures/CheckLowHPProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -573,11 +592,6 @@
     ],
     "BLOCKS:minecraft:walls": [
       "~CUSTOM:NixtineSandstoneWall"
-    ],
-    "ENTITIES:mod:endermites": [
-      "CUSTOM:Scrutimite",
-      "CUSTOM:QueenMite",
-      "EntityEndermite"
     ],
     "ENTITIES:minecraft:arthropod": [
       "~CUSTOM:QueenMite",

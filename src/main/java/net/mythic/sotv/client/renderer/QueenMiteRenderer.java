@@ -1,21 +1,6 @@
 
 package net.mythic.sotv.client.renderer;
 
-import software.bernie.geckolib.renderer.GeoEntityRenderer;
-import software.bernie.geckolib.cache.object.BakedGeoModel;
-
-import net.mythic.sotv.entity.model.QueenMiteModel;
-import net.mythic.sotv.entity.layer.QueenMiteLayer;
-import net.mythic.sotv.entity.QueenMiteEntity;
-
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.renderer.entity.EntityRendererProvider;
-import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.MultiBufferSource;
-
-import com.mojang.blaze3d.vertex.VertexConsumer;
-import com.mojang.blaze3d.vertex.PoseStack;
-
 public class QueenMiteRenderer extends GeoEntityRenderer<QueenMiteEntity> {
 	public QueenMiteRenderer(EntityRendererProvider.Context renderManager) {
 		super(renderManager, new QueenMiteModel());
