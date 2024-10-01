@@ -132,6 +132,11 @@ public class QueenMiteEntity extends Monster implements GeoEntity {
 	}
 
 	@Override
+	public SoundEvent getAmbientSound() {
+		return BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.warden.ambient"));
+	}
+
+	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
 		return BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.spider.hurt"));
 	}

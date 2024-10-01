@@ -758,6 +758,37 @@
           "src/main/java/net/mythic/sotv/item/LaserItem.java"
         ]
       }
+    },
+    {
+      "name": "EndingRing",
+      "type": "curiosbauble",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ending_ring",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mythic/sotv/item/EndingRingItem.java",
+          "src/main/resources/assets/sotv/models/item/ending_ring.json"
+        ]
+      }
+    },
+    {
+      "name": "EndingRingWhileBaubleIsEquippedTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ending_ring_while_bauble_is_equipped_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mythic/sotv/procedures/EndingRingWhileBaubleIsEquippedTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -810,7 +841,6 @@
       "block.sotv.nixtine_sandstone_wall": "Nixtine Sandstone Wall",
       "block.sotv.nixtine_sandstone": "Nixtine Sandstone",
       "block.sotv.mite_vent": "Mite Vent",
-      "item.sotv.laser": "Laser",
       "block.sotv.mitenus": "Mitenus",
       "entity.sotv.late_pearl_entity": "Late Pearl Entity",
       "block.sotv.endermite_egg": "Endermite Egg",

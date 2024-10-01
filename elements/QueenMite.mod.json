@@ -112,7 +112,7 @@
       "value": ""
     },
     "livingSound": {
-      "value": ""
+      "value": "entity.warden.ambient"
     },
     "hurtSound": {
       "value": "entity.spider.hurt"

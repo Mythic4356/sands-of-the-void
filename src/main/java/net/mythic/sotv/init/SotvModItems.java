@@ -10,6 +10,7 @@ import net.neoforged.neoforge.common.DeferredSpawnEggItem;
 
 import net.mythic.sotv.item.LatePearlItem;
 import net.mythic.sotv.item.LaserItem;
+import net.mythic.sotv.item.EndingRingItem;
 import net.mythic.sotv.item.ClaspearlItem;
 import net.mythic.sotv.SotvMod;
 
@@ -36,6 +37,7 @@ public class SotvModItems {
 	public static final DeferredHolder<Item, Item> QUEEN_MITE_SPAWN_EGG = REGISTRY.register("queen_mite_spawn_egg", () -> new DeferredSpawnEggItem(SotvModEntities.QUEEN_MITE, -6750055, -10092442, new Item.Properties()));
 	public static final DeferredHolder<Item, Item> MITE_VENT = block(SotvModBlocks.MITE_VENT);
 	public static final DeferredHolder<Item, Item> LASER = REGISTRY.register("laser", LaserItem::new);
+	public static final DeferredHolder<Item, Item> ENDING_RING = REGISTRY.register("ending_ring", EndingRingItem::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items
