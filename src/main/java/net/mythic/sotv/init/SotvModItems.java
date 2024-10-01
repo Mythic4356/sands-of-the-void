@@ -33,6 +33,7 @@ public class SotvModItems {
 	public static final DeferredHolder<Item, Item> GELCOON = block(SotvModBlocks.GELCOON);
 	public static final DeferredHolder<Item, Item> SCRUTIMITE_SPAWN_EGG = REGISTRY.register("scrutimite_spawn_egg", () -> new DeferredSpawnEggItem(SotvModEntities.SCRUTIMITE, -13434829, -65536, new Item.Properties()));
 	public static final DeferredHolder<Item, Item> QUEEN_MITE_SPAWN_EGG = REGISTRY.register("queen_mite_spawn_egg", () -> new DeferredSpawnEggItem(SotvModEntities.QUEEN_MITE, -6750055, -10092442, new Item.Properties()));
+	public static final DeferredHolder<Item, Item> MITE_VENT = block(SotvModBlocks.MITE_VENT);
 
 	// Start of user code block custom items
 	// End of user code block custom items

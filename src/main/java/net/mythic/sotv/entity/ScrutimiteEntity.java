@@ -121,7 +121,7 @@ public class ScrutimiteEntity extends Monster implements GeoEntity {
 	@Override
 	public void die(DamageSource source) {
 		super.die(source);
-		ScrutimiteEntityDiesProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ());
+		ScrutimiteEntityDiesProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
 	}
 
 	@Override

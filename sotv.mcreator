@@ -460,6 +460,10 @@
         ],
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -657,6 +661,56 @@
           }
         ]
       }
+    },
+    {
+      "name": "MiteVentEntityWalksOnTheBlock",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mite_vent_entity_walks_on_the_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mythic/sotv/procedures/MiteVentEntityWalksOnTheBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MiteVent",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mite_vent",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/sotv/models/item/mite_vent.json",
+          "src/main/resources/assets/sotv/models/block/mite_vent.json",
+          "src/main/java/net/mythic/sotv/block/MiteVentBlock.java",
+          "src/main/resources/assets/sotv/blockstates/mite_vent.json",
+          "src/main/resources/data/sotv/loot_tables/blocks/mite_vent.json"
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -708,6 +762,7 @@
       "item.sotv.queen_mite_spawn_egg": "Queen Mite Spawn Egg",
       "block.sotv.nixtine_sandstone_wall": "Nixtine Sandstone Wall",
       "block.sotv.nixtine_sandstone": "Nixtine Sandstone",
+      "block.sotv.mite_vent": "Mite Vent",
       "block.sotv.mitenus": "Mitenus",
       "entity.sotv.late_pearl_entity": "Late Pearl Entity",
       "block.sotv.endermite_egg": "Endermite Egg",

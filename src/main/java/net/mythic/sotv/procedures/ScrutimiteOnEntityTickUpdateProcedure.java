@@ -25,28 +25,61 @@ public class ScrutimiteOnEntityTickUpdateProcedure {
 			if (entity instanceof ScrutimiteEntity animatable)
 				animatable.setTexture("scrutimite");
 		}
-		if (Mth.nextInt(RandomSource.create(), 1, 50) == 20) {
+		if (Mth.nextInt(RandomSource.create(), 1, 70) == 20) {
 			if (entity instanceof ScrutimiteEntity _datEntL4 && _datEntL4.getEntityData().get(ScrutimiteEntity.DATA_egg)) {
-				world.setBlock(BlockPos.containing(x, y, z), SotvModBlocks.ENDERMITE_EGG.get().defaultBlockState(), 3);
-				if (entity instanceof ScrutimiteEntity _datEntSetL)
-					_datEntSetL.getEntityData().set(ScrutimiteEntity.DATA_egg, false);
-			} else {
-				sx = -3;
+				sx = -1;
 				found = false;
-				for (int index0 = 0; index0 < 6; index0++) {
-					sy = -3;
-					for (int index1 = 0; index1 < 6; index1++) {
-						sz = -3;
-						for (int index2 = 0; index2 < 6; index2++) {
-							if ((world.getBlockState(BlockPos.containing(x + sx, y + sy, z + sz))).getBlock() == SotvModBlocks.ENDERMITE_EGG.get()) {
-								world.setBlock(BlockPos.containing(x + sx, y + sy, z + sz), Blocks.AIR.defaultBlockState(), 3);
+				for (int index0 = 0; index0 < 3; index0++) {
+					sy = -1;
+					for (int index1 = 0; index1 < 3; index1++) {
+						sz = -1;
+						for (int index2 = 0; index2 < 3; index2++) {
+							if ((world.getBlockState(BlockPos.containing(x + sx, y + sy, z + sz))).getBlock() == Blocks.AIR) {
 								found = true;
+								world.setBlock(BlockPos.containing(x + sx, y + sy, z + sz), SotvModBlocks.ENDERMITE_EGG.get().defaultBlockState(), 3);
+								break;
 							}
 							sz = sz + 1;
 						}
 						sy = sy + 1;
+						if (found) {
+							break;
+						}
 					}
 					sx = sx + 1;
+					if (found) {
+						break;
+					}
+				}
+				if (entity instanceof ScrutimiteEntity _datEntSetL)
+					_datEntSetL.getEntityData().set(ScrutimiteEntity.DATA_egg, (!found));
+			} else {
+				sx = -1;
+				found = false;
+				for (int index3 = 0; index3 < 3; index3++) {
+					sy = -1;
+					for (int index4 = 0; index4 < 3; index4++) {
+						sz = -1;
+						for (int index5 = 0; index5 < 3; index5++) {
+							if ((world.getBlockState(BlockPos.containing(x + sx, y + sy, z + sz))).getBlock() == SotvModBlocks.ENDERMITE_EGG.get()) {
+								world.setBlock(BlockPos.containing(x + sx, y + sy, z + sz), Blocks.AIR.defaultBlockState(), 3);
+								found = true;
+								break;
+							}
+							sz = sz + 1;
+							if (found) {
+								break;
+							}
+						}
+						sy = sy + 1;
+						if (found) {
+							break;
+						}
+					}
+					sx = sx + 1;
+					if (found) {
+						break;
+					}
 				}
 				if (entity instanceof ScrutimiteEntity _datEntSetL)
 					_datEntSetL.getEntityData().set(ScrutimiteEntity.DATA_egg, found);
