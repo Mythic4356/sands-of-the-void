@@ -31,6 +31,7 @@ public class SotvModTabs {
 				tabData.accept(SotvModItems.LATE_PEARL.get());
 				tabData.accept(SotvModItems.SCRUTIMITE_SPAWN_EGG.get());
 				tabData.accept(SotvModItems.QUEEN_MITE_SPAWN_EGG.get());
+				tabData.accept(SotvModItems.ENDING_RING.get());
 			})
 
 					.build());
