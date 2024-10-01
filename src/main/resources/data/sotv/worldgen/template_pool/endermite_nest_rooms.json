@@ -3,7 +3,7 @@
   "fallback": "minecraft:empty",
   "elements": [
     {
-      "weight": 2,
+      "weight": 3,
       "element": {
         "element_type": "minecraft:single_pool_element",
         "location": "sotv:endermite_nest_tunnel_we",
@@ -14,7 +14,7 @@
       }
     },
     {
-      "weight": 3,
+      "weight": 4,
       "element": {
         "element_type": "minecraft:single_pool_element",
         "location": "sotv:endermite_nest_eggroom1",
@@ -25,7 +25,7 @@
       }
     },
     {
-      "weight": 3,
+      "weight": 4,
       "element": {
         "element_type": "minecraft:single_pool_element",
         "location": "sotv:endermite_nest_tunnel_c1",
@@ -36,7 +36,7 @@
       }
     },
     {
-      "weight": 3,
+      "weight": 4,
       "element": {
         "element_type": "minecraft:single_pool_element",
         "location": "sotv:endermite_nest_tunnel_c2",
@@ -47,7 +47,7 @@
       }
     },
     {
-      "weight": 2,
+      "weight": 3,
       "element": {
         "element_type": "minecraft:single_pool_element",
         "location": "sotv:endermite_nest_tunnel_ns",
@@ -58,7 +58,7 @@
       }
     },
     {
-      "weight": 3,
+      "weight": 4,
       "element": {
         "element_type": "minecraft:single_pool_element",
         "location": "sotv:endermite_nest_tunnel_c3",
@@ -69,10 +69,21 @@
       }
     },
     {
-      "weight": 4,
+      "weight": 5,
       "element": {
         "element_type": "minecraft:single_pool_element",
         "location": "sotv:endermite_nest_cross",
+        "projection": "rigid",
+        "processors": {
+          "processors": []
+        }
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "sotv:endermite_royal_chamber",
         "projection": "rigid",
         "processors": {
           "processors": []

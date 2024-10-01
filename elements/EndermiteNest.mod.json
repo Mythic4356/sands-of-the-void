@@ -31,44 +31,50 @@
         "fallbackPool": "",
         "poolParts": [
           {
-            "weight": 2,
+            "weight": 3,
             "structure": "endermite_nest_tunnel_we",
             "projection": "rigid",
             "ignoredBlocks": []
           },
           {
-            "weight": 3,
+            "weight": 4,
             "structure": "endermite_nest_eggroom1",
             "projection": "rigid",
             "ignoredBlocks": []
           },
           {
-            "weight": 3,
+            "weight": 4,
             "structure": "endermite_nest_tunnel_c1",
             "projection": "rigid",
             "ignoredBlocks": []
           },
           {
-            "weight": 3,
+            "weight": 4,
             "structure": "endermite_nest_tunnel_c2",
             "projection": "rigid",
             "ignoredBlocks": []
           },
           {
-            "weight": 2,
+            "weight": 3,
             "structure": "endermite_nest_tunnel_ns",
             "projection": "rigid",
             "ignoredBlocks": []
           },
           {
-            "weight": 3,
+            "weight": 4,
             "structure": "endermite_nest_tunnel_c3",
             "projection": "rigid",
             "ignoredBlocks": []
           },
           {
-            "weight": 4,
+            "weight": 5,
             "structure": "endermite_nest_cross",
+            "projection": "rigid",
+            "ignoredBlocks": []
+          },
+          {
+            "weight": 4,
+            "structure": "endermite_royal_chamber",
             "projection": "rigid",
             "ignoredBlocks": []
           }
@@ -79,26 +85,20 @@
         "fallbackPool": "",
         "poolParts": [
           {
-            "weight": 3,
+            "weight": 4,
             "structure": "endermite_nest_tunnel_c3",
             "projection": "rigid",
             "ignoredBlocks": []
           },
           {
-            "weight": 3,
+            "weight": 4,
             "structure": "endermite_nest_tunnel_c4",
             "projection": "rigid",
             "ignoredBlocks": []
           },
           {
-            "weight": 2,
+            "weight": 3,
             "structure": "endermite_nest_tunnel_ud",
-            "projection": "rigid",
-            "ignoredBlocks": []
-          },
-          {
-            "weight": 1,
-            "structure": "endermite_nest_center",
             "projection": "rigid",
             "ignoredBlocks": []
           }
