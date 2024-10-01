@@ -1,6 +1,15 @@
 package net.mythic.sotv.entity.model;
 
+import software.bernie.geckolib.model.data.EntityModelData;
+import software.bernie.geckolib.model.GeoModel;
+import software.bernie.geckolib.constant.DataTickets;
+import software.bernie.geckolib.cache.object.GeoBone;
 import software.bernie.geckolib.animation.AnimationState;
+
+import net.mythic.sotv.entity.QueenMiteEntity;
+
+import net.minecraft.util.Mth;
+import net.minecraft.resources.ResourceLocation;
 
 public class QueenMiteModel extends GeoModel<QueenMiteEntity> {
 	@Override

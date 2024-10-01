@@ -1,6 +1,7 @@
 package net.mythic.sotv.procedures;
 
-import net.neoforged.bus.api.Event;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
 
 public class CheckLowHPProcedure {
 	public static boolean execute(Entity entity) {

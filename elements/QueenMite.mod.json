@@ -12,7 +12,15 @@
     "boundingBoxScale": {
       "fixedValue": 3.0
     },
-    "entityDataEntries": [],
+    "entityDataEntries": [
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "summoncooldown",
+        "type": "integer",
+        "value": 1200
+      }
+    ],
     "modelWidth": 1.0,
     "modelHeight": 0.8,
     "modelShadowSize": 1.0,
@@ -105,6 +113,9 @@
     },
     "raidCelebrationSound": {
       "value": ""
+    },
+    "onMobTickUpdate": {
+      "name": "QueenMiteOnEntityTickUpdate"
     },
     "hasAI": true,
     "aiBase": "(none)",
