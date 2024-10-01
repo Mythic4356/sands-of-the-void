@@ -15,6 +15,7 @@ import net.neoforged.neoforge.event.entity.SpawnPlacementRegisterEvent;
 import net.mythic.sotv.procedures.QueenMiteOnEntityTickUpdateProcedure;
 import net.mythic.sotv.procedures.CheckLowHPProcedure;
 
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.monster.Monster;
@@ -45,6 +46,7 @@ import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.BlockPos;
 
 public class QueenMiteEntity extends Monster implements GeoEntity {
 	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(QueenMiteEntity.class, EntityDataSerializers.BOOLEAN);
@@ -137,6 +139,11 @@ public class QueenMiteEntity extends Monster implements GeoEntity {
 	}
 
 	@Override
+	public void playStepSound(BlockPos pos, BlockState blockIn) {
+		this.playSound(BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.copper.break")), 0.15f, 1);
+	}
+
+	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
 		return BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.spider.hurt"));
 	}
@@ -186,7 +193,7 @@ public class QueenMiteEntity extends Monster implements GeoEntity {
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.1);
-		builder = builder.add(Attributes.MAX_HEALTH, 50);
+		builder = builder.add(Attributes.MAX_HEALTH, 90);
 		builder = builder.add(Attributes.ARMOR, 5.9);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 5);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 30);

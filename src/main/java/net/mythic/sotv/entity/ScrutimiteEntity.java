@@ -18,6 +18,7 @@ import net.mythic.sotv.init.SotvModEntities;
 
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.monster.EnderMan;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
@@ -96,9 +97,10 @@ public class ScrutimiteEntity extends Monster implements GeoEntity {
 		this.targetSelector.addGoal(4, new HurtByTargetGoal(this).setAlertOthers());
 		this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, EnderMan.class, true, true));
 		this.targetSelector.addGoal(6, new NearestAttackableTargetGoal(this, ServerPlayer.class, true, true));
-		this.goalSelector.addGoal(7, new FollowMobGoal(this, 1, (float) 5, (float) 3));
-		this.goalSelector.addGoal(8, new RandomLookAroundGoal(this));
-		this.goalSelector.addGoal(9, new FloatGoal(this));
+		this.targetSelector.addGoal(7, new NearestAttackableTargetGoal(this, Player.class, true, true));
+		this.goalSelector.addGoal(8, new FollowMobGoal(this, 1, (float) 5, (float) 3));
+		this.goalSelector.addGoal(9, new RandomLookAroundGoal(this));
+		this.goalSelector.addGoal(10, new FloatGoal(this));
 	}
 
 	@Override
