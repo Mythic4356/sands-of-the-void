@@ -31,7 +31,7 @@ public class SotvModEntities {
 	public static final DeferredHolder<EntityType<?>, EntityType<ScrutimiteEntity>> SCRUTIMITE = register("scrutimite",
 			EntityType.Builder.<ScrutimiteEntity>of(ScrutimiteEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
-					.sized(0.6f, 1.8f));
+					.sized(1f, 1f));
 	public static final DeferredHolder<EntityType<?>, EntityType<QueenMiteEntity>> QUEEN_MITE = register("queen_mite",
 			EntityType.Builder.<QueenMiteEntity>of(QueenMiteEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 

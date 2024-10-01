@@ -19,7 +19,7 @@ import com.mojang.blaze3d.vertex.PoseStack;
 public class ScrutimiteRenderer extends GeoEntityRenderer<ScrutimiteEntity> {
 	public ScrutimiteRenderer(EntityRendererProvider.Context renderManager) {
 		super(renderManager, new ScrutimiteModel());
-		this.shadowRadius = 0.5f;
+		this.shadowRadius = 1f;
 		this.addRenderLayer(new ScrutimiteLayer(this));
 	}
 

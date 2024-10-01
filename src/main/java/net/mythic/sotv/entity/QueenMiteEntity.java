@@ -25,6 +25,7 @@ import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.PanicGoal;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
+import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
 import net.minecraft.world.entity.ai.goal.LeapAtTargetGoal;
 import net.minecraft.world.entity.ai.goal.FloatGoal;
 import net.minecraft.world.entity.ai.goal.BreakDoorGoal;
@@ -50,6 +51,8 @@ public class QueenMiteEntity extends Monster implements GeoEntity {
 	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(QueenMiteEntity.class, EntityDataSerializers.STRING);
 	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(QueenMiteEntity.class, EntityDataSerializers.STRING);
 	public static final EntityDataAccessor<Integer> DATA_summoncooldown = SynchedEntityData.defineId(QueenMiteEntity.class, EntityDataSerializers.INT);
+	public static final EntityDataAccessor<Integer> DATA_lasercooldown = SynchedEntityData.defineId(QueenMiteEntity.class, EntityDataSerializers.INT);
+	public static final EntityDataAccessor<Boolean> DATA_laser = SynchedEntityData.defineId(QueenMiteEntity.class, EntityDataSerializers.BOOLEAN);
 	private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 	private boolean swinging;
 	private boolean lastloop;
@@ -70,6 +73,8 @@ public class QueenMiteEntity extends Monster implements GeoEntity {
 		builder.define(ANIMATION, "undefined");
 		builder.define(TEXTURE, "queenmite");
 		builder.define(DATA_summoncooldown, 1200);
+		builder.define(DATA_lasercooldown, 0);
+		builder.define(DATA_laser, false);
 	}
 
 	public void setTexture(String texture) {
@@ -107,17 +112,18 @@ public class QueenMiteEntity extends Monster implements GeoEntity {
 		this.goalSelector.addGoal(2, new LeapAtTargetGoal(this, (float) 0.5));
 		this.targetSelector.addGoal(3, new HurtByTargetGoal(this).setAlertOthers());
 		this.targetSelector.addGoal(4, new NearestAttackableTargetGoal(this, Player.class, true, true));
-		this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, EnderMan.class, true, false));
-		this.goalSelector.addGoal(6, new MeleeAttackGoal(this, 1.2, false) {
+		this.goalSelector.addGoal(5, new LookAtPlayerGoal(this, Player.class, (float) 14));
+		this.targetSelector.addGoal(6, new NearestAttackableTargetGoal(this, EnderMan.class, true, false));
+		this.goalSelector.addGoal(7, new MeleeAttackGoal(this, 1.2, false) {
 			@Override
 			protected boolean canPerformAttack(LivingEntity entity) {
 				return this.isTimeToAttack() && this.mob.distanceToSqr(entity) < (this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth()) && this.mob.getSensing().hasLineOfSight(entity);
 			}
 		});
-		this.goalSelector.addGoal(7, new BreakDoorGoal(this, e -> true));
-		this.goalSelector.addGoal(8, new RandomStrollGoal(this, 1));
-		this.goalSelector.addGoal(9, new RandomLookAroundGoal(this));
-		this.goalSelector.addGoal(10, new FloatGoal(this));
+		this.goalSelector.addGoal(8, new BreakDoorGoal(this, e -> true));
+		this.goalSelector.addGoal(9, new RandomStrollGoal(this, 1));
+		this.goalSelector.addGoal(10, new RandomLookAroundGoal(this));
+		this.goalSelector.addGoal(11, new FloatGoal(this));
 	}
 
 	@Override
@@ -140,6 +146,8 @@ public class QueenMiteEntity extends Monster implements GeoEntity {
 		super.addAdditionalSaveData(compound);
 		compound.putString("Texture", this.getTexture());
 		compound.putInt("Datasummoncooldown", this.entityData.get(DATA_summoncooldown));
+		compound.putInt("Datalasercooldown", this.entityData.get(DATA_lasercooldown));
+		compound.putBoolean("Datalaser", this.entityData.get(DATA_laser));
 	}
 
 	@Override
@@ -149,6 +157,10 @@ public class QueenMiteEntity extends Monster implements GeoEntity {
 			this.setTexture(compound.getString("Texture"));
 		if (compound.contains("Datasummoncooldown"))
 			this.entityData.set(DATA_summoncooldown, compound.getInt("Datasummoncooldown"));
+		if (compound.contains("Datalasercooldown"))
+			this.entityData.set(DATA_lasercooldown, compound.getInt("Datalasercooldown"));
+		if (compound.contains("Datalaser"))
+			this.entityData.set(DATA_laser, compound.getBoolean("Datalaser"));
 	}
 
 	@Override
@@ -168,14 +180,14 @@ public class QueenMiteEntity extends Monster implements GeoEntity {
 
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
-		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
+		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.1);
 		builder = builder.add(Attributes.MAX_HEALTH, 50);
-		builder = builder.add(Attributes.ARMOR, 5);
+		builder = builder.add(Attributes.ARMOR, 5.9);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 5);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 30);
 		builder = builder.add(Attributes.STEP_HEIGHT, 1);
-		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 0.5);
-		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 0.5);
+		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 1.2);
+		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 1.3);
 		return builder;
 	}
 

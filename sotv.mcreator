@@ -711,6 +711,53 @@
           "src/main/resources/data/sotv/loot_tables/blocks/mite_vent.json"
         ]
       }
+    },
+    {
+      "name": "LaserItemInHandTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "laser_item_in_hand_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mythic/sotv/procedures/LaserItemInHandTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Laser",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "laser",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/sotv/models/item/laser.json",
+          "src/main/java/net/mythic/sotv/item/LaserItem.java"
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -763,6 +810,7 @@
       "block.sotv.nixtine_sandstone_wall": "Nixtine Sandstone Wall",
       "block.sotv.nixtine_sandstone": "Nixtine Sandstone",
       "block.sotv.mite_vent": "Mite Vent",
+      "item.sotv.laser": "Laser",
       "block.sotv.mitenus": "Mitenus",
       "entity.sotv.late_pearl_entity": "Late Pearl Entity",
       "block.sotv.endermite_egg": "Endermite Egg",
