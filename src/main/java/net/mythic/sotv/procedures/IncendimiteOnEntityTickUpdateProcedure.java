@@ -75,7 +75,7 @@ public class IncendimiteOnEntityTickUpdateProcedure {
 				animatable.setTexture("habibimite");
 		} else {
 			if (entity instanceof IncendimiteEntity animatable)
-				animatable.setTexture("incendirmite");
+				animatable.setTexture("incendimite");
 		}
 	}
 }
