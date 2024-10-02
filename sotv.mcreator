@@ -791,6 +791,18 @@
       }
     },
     {
+      "name": "IsopetranLaserDamage",
+      "type": "damagetype",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "isopetran_laser_damage",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/sotv/damage_type/isopetran_laser_damage.json"
+        ]
+      }
+    },
+    {
       "name": "IsopetranLaser",
       "type": "particle",
       "compiles": true,
@@ -800,18 +812,6 @@
         "files": [
           "src/main/resources/assets/sotv/particles/isopetran_laser.json",
           "src/main/java/net/mythic/sotv/client/particle/IsopetranLaserParticle.java"
-        ]
-      }
-    },
-    {
-      "name": "IsopetranLaserDamage",
-      "type": "damagetype",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "isopetran_laser_damage",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/sotv/damage_type/isopetran_laser_damage.json"
         ]
       }
     },

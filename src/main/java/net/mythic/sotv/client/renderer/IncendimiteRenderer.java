@@ -1,20 +1,6 @@
 
 package net.mythic.sotv.client.renderer;
 
-import software.bernie.geckolib.renderer.GeoEntityRenderer;
-import software.bernie.geckolib.cache.object.BakedGeoModel;
-
-import net.mythic.sotv.entity.model.IncendimiteModel;
-import net.mythic.sotv.entity.IncendimiteEntity;
-
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.renderer.entity.EntityRendererProvider;
-import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.MultiBufferSource;
-
-import com.mojang.blaze3d.vertex.VertexConsumer;
-import com.mojang.blaze3d.vertex.PoseStack;
-
 public class IncendimiteRenderer extends GeoEntityRenderer<IncendimiteEntity> {
 	public IncendimiteRenderer(EntityRendererProvider.Context renderManager) {
 		super(renderManager, new IncendimiteModel());
@@ -34,4 +20,5 @@ public class IncendimiteRenderer extends GeoEntityRenderer<IncendimiteEntity> {
 		this.scaleWidth = scale;
 		super.preRender(poseStack, entity, model, bufferSource, buffer, isReRender, partialTick, packedLight, packedOverlay, red, green, blue, alpha);
 	}
+
 }
