@@ -1,5 +1,6 @@
 package net.mythic.sotv.procedures;
 
+import net.mythic.sotv.init.SotvModParticleTypes;
 import net.mythic.sotv.init.SotvModEntities;
 import net.mythic.sotv.entity.QueenMiteEntity;
 
@@ -12,16 +13,16 @@ import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.BlockPos;
 
 import java.util.List;
@@ -58,7 +59,7 @@ public class QueenMiteOnEntityTickUpdateProcedure {
 		if ((entity instanceof QueenMiteEntity _datEntI ? _datEntI.getEntityData().get(QueenMiteEntity.DATA_lasercooldown) : 0) == 2400) {
 			if (entity instanceof QueenMiteEntity _datEntSetL)
 				_datEntSetL.getEntityData().set(QueenMiteEntity.DATA_laser, true);
-		} else if ((entity instanceof QueenMiteEntity _datEntI ? _datEntI.getEntityData().get(QueenMiteEntity.DATA_lasercooldown) : 0) == 0) {
+		} else if ((entity instanceof QueenMiteEntity _datEntI ? _datEntI.getEntityData().get(QueenMiteEntity.DATA_lasercooldown) : 0) >= 0) {
 			if (entity instanceof QueenMiteEntity _datEntSetI)
 				_datEntSetI.getEntityData().set(QueenMiteEntity.DATA_lasercooldown, (int) ((entity instanceof QueenMiteEntity _datEntI ? _datEntI.getEntityData().get(QueenMiteEntity.DATA_lasercooldown) : 0) + 1));
 		}
@@ -74,8 +75,8 @@ public class QueenMiteOnEntityTickUpdateProcedure {
 								.getZ()))
 						.canOcclude() || raytrace_distance < 14) {
 					raytrace_distance = raytrace_distance + 1;
-					world.addParticle(ParticleTypes.FLAME, x, (y + 1), z, ((Math.sin(Math.toRadians(entity.getYRot() + 180)) * raytrace_distance) / 2), ((Math.sin(Math.toRadians(0 - entity.getXRot())) * raytrace_distance) / 2),
-							((Math.cos(Math.toRadians(entity.getYRot())) * raytrace_distance) / 2));
+					world.addParticle((SimpleParticleType) (SotvModParticleTypes.ISOPETRAN_LASER.get()), x, (y + 1), z, ((Math.sin(Math.toRadians(entity.getYRot() + 180)) * raytrace_distance) / 2),
+							((Math.sin(Math.toRadians(0 - entity.getXRot())) * raytrace_distance) / 2), ((Math.cos(Math.toRadians(entity.getYRot())) * raytrace_distance) / 2));
 					if (world instanceof Level _level) {
 						if (!_level.isClientSide()) {
 							_level.playSound(null,
@@ -86,7 +87,7 @@ public class QueenMiteOnEntityTickUpdateProcedure {
 													.getBlockPos().getY(),
 											entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(raytrace_distance)), ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, entity))
 													.getBlockPos().getZ()),
-									BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.ender_dragon.shoot")), SoundSource.NEUTRAL, 1, 1);
+									BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.beacon.ambient")), SoundSource.NEUTRAL, 1, 1);
 						} else {
 							_level.playLocalSound(
 									(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(raytrace_distance)), ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, entity))
@@ -95,7 +96,7 @@ public class QueenMiteOnEntityTickUpdateProcedure {
 											.getBlockPos().getY()),
 									(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(raytrace_distance)), ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, entity))
 											.getBlockPos().getZ()),
-									BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.ender_dragon.shoot")), SoundSource.NEUTRAL, 1, 1, false);
+									BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.beacon.ambient")), SoundSource.NEUTRAL, 1, 1, false);
 						}
 					}
 					{
@@ -109,14 +110,15 @@ public class QueenMiteOnEntityTickUpdateProcedure {
 						List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 						for (Entity entityiterator : _entfound) {
 							if (!(entityiterator == entity) && entityiterator instanceof LivingEntity && !((entity.getVehicle()) == entityiterator) && !((entityiterator.getVehicle()) == entity)) {
-								entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.GENERIC_KILL)), 5);
+								entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("sotv:isopetran_laser_damage")))),
+										(float) 0.5);
 							}
 						}
 					}
 				}
 			}
 			if (entity instanceof QueenMiteEntity _datEntSetI)
-				_datEntSetI.getEntityData().set(QueenMiteEntity.DATA_lasercooldown, (int) ((entity instanceof QueenMiteEntity _datEntI ? _datEntI.getEntityData().get(QueenMiteEntity.DATA_lasercooldown) : 0) - 1));
+				_datEntSetI.getEntityData().set(QueenMiteEntity.DATA_lasercooldown, (int) ((entity instanceof QueenMiteEntity _datEntI ? _datEntI.getEntityData().get(QueenMiteEntity.DATA_lasercooldown) : 0) - 5));
 		}
 	}
 }

@@ -38,6 +38,7 @@ public class SotvModItems {
 	public static final DeferredHolder<Item, Item> MITE_VENT = block(SotvModBlocks.MITE_VENT);
 	public static final DeferredHolder<Item, Item> LASER = REGISTRY.register("laser", LaserItem::new);
 	public static final DeferredHolder<Item, Item> ENDING_RING = REGISTRY.register("ending_ring", EndingRingItem::new);
+	public static final DeferredHolder<Item, Item> INCENDIMITE_SPAWN_EGG = REGISTRY.register("incendimite_spawn_egg", () -> new DeferredSpawnEggItem(SotvModEntities.INCENDIMITE, -13395712, -6750055, new Item.Properties()));
 
 	// Start of user code block custom items
 	// End of user code block custom items

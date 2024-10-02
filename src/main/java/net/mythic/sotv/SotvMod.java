@@ -14,6 +14,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.IEventBus;
 
 import net.mythic.sotv.init.SotvModTabs;
+import net.mythic.sotv.init.SotvModParticleTypes;
 import net.mythic.sotv.init.SotvModItems;
 import net.mythic.sotv.init.SotvModEntities;
 import net.mythic.sotv.init.SotvModBlocks;
@@ -46,6 +47,8 @@ public class SotvMod {
 		SotvModItems.REGISTRY.register(modEventBus);
 		SotvModEntities.REGISTRY.register(modEventBus);
 		SotvModTabs.REGISTRY.register(modEventBus);
+
+		SotvModParticleTypes.REGISTRY.register(modEventBus);
 
 		// Start of user code block mod init
 		// End of user code block mod init

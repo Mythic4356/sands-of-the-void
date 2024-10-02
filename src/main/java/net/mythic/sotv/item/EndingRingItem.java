@@ -1,9 +1,14 @@
 
 package net.mythic.sotv.item;
 
-import net.minecraft.world.entity.ai.attributes.Attributes;
+import top.theillusivec4.curios.api.type.capability.ICurioItem;
+import top.theillusivec4.curios.api.SlotContext;
 
-import javax.annotation.Nullable;
+import net.mythic.sotv.procedures.EndingRingWhileBaubleIsEquippedTickProcedure;
+
+import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Item;
 
 public class EndingRingItem extends Item implements ICurioItem {
 	public EndingRingItem() {
@@ -12,6 +17,6 @@ public class EndingRingItem extends Item implements ICurioItem {
 
 	@Override
 	public void curioTick(SlotContext slotContext, ItemStack stack) {
-		EndingRingWhileBaubleIsEquippedTickProcedure.execute();
+		EndingRingWhileBaubleIsEquippedTickProcedure.execute(slotContext.entity());
 	}
 }

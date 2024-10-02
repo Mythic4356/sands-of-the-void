@@ -1,0 +1,12 @@
+{
+  "_fv": 66,
+  "_type": "damagetype",
+  "definition": {
+    "exhaustion": 0.2,
+    "scaling": "never",
+    "effects": "thorns",
+    "normalDeathMessage": "%1$s was lasered",
+    "itemDeathMessage": "%1$s was lasered in half by %2$s",
+    "playerDeathMessage": "%1$s got the gojo treatment whilst trying to escape %2$s"
+  }
+}
