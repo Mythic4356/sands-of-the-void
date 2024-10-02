@@ -805,7 +805,7 @@
     {
       "name": "IsopetranLaser",
       "type": "particle",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "isopetran_laser",
       "metadata": {
@@ -818,7 +818,7 @@
     {
       "name": "Incendimite",
       "type": "animatedentity",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "incendimite",
       "metadata": {
@@ -834,7 +834,7 @@
     {
       "name": "IncendimiteOnEntityTickUpdate",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "incendimite_on_entity_tick_update",
       "metadata": {
